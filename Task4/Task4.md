@@ -17,3 +17,4 @@
 ## Задача 5.
 1. [Screenshot 1](Ex5/Ex5-1.JPG) Запуск контейнера происходит по каноническому имени yaml-файла, т.е. compose.yaml.
 2. [Screenshot 2](Ex5/Ex5-2.1.JPG) Требуется использовать директиву `-include` в файле compose.yaml, ссылаясь на файл docker-compose.yaml
+3. [Screenshot 3](Ex5/Ex5-3.JPG) Загрузка образа custom-nginx как custom-nginx:latest в запущенном локальном registry.
