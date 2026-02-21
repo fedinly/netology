@@ -19,3 +19,6 @@
 2. [Screenshot 2](Ex5/Ex5-2.1.JPG) Требуется использовать директиву `-include` в файле compose.yaml, ссылаясь на файл docker-compose.yaml
 3. [Screenshot 3](Ex5/Ex5-3.JPG) Загрузка образа custom-nginx как custom-nginx:latest в запущенном локальном registry.
 4. [Screenshot 4](Ex5/Ex5-4.JPG) Начальная настройка portainer.
+5. [Screenshot 5](Ex5/Ex5-5.JPG) B local-окружении деплой custom-nginx (в portainer).
+6. [Screenshot 6](Ex5/Ex5-6.1.JPG), [Screenshot 7](Ex5/Ex5-6.2.JPG) Скриншоты от поля "AppArmorProfile" до "Driver" контейнера custom-nginx.
+7. [Screenshot 8](Ex5/Ex5-7.JPG)
