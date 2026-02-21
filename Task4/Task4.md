@@ -2,4 +2,4 @@
 ## Вопрос 1.
 [General](https://hub.docker.com/repository/docker/fedinly/custom-nginx/general)
 ## Вопрос 2.
-[Screenshot 2](Task4/Ex2/Ex2.jpeg)
+[Screenshot 2](Ex2/Ex2.jpeg)
