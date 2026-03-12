@@ -9,6 +9,6 @@
 [Скриншот экрана - запрос к БД](Ex4/screen-02.JPG)  
 [Ссылка на репозиторий](https://github.com/fedinly/shvirtd-example-python.git)
 На следующем скриншоте представлено два окна, в одном - docker-cli context на облачную VM, в другом - подключено с помощью yc compute ssh к самой удаленной  VM, ID контейнеров выделены (совпадают).  
-
+[Скриншот экрана - docker context](Ex4/screen-03.JPG) 
 ## Задача 5.
 ## Задача 6.
