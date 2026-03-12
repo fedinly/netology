@@ -8,3 +8,5 @@
 ## Задача 4.
 [Скриншот экрана - запрос к БД](Ex4/screen-02.JPG)  
 [Ссылка на репозиторий](https://github.com/fedinly/shvirtd-example-python.git)
+## Задача 5.
+## Задача 6.
