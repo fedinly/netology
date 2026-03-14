@@ -14,5 +14,5 @@
 [Скриншот экрана - docker context](Ex4/screen-03.JPG) 
 ## Задача 5.
 ## Задача 6.  
-В dive вывод отпечатка: `1a704e41dec03e4b8aab289f78ddb96567a8898b766d` (другой)
-[Скриншот экрана 1](Ex6/screen-05.JPG)  [Скриншот экрана 2](Ex6/screen-06.JPG)
+В dive вывод отпечатка: `1a704e41dec03e4b8aab289f78ddb96567a8898b766d` (другой)  
+Вывод docker save: [Скриншот экрана 1](Ex6/screen-05.JPG)  [Скриншот экрана 2](Ex6/screen-06.JPG)
