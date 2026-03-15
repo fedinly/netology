@@ -21,4 +21,5 @@
 [Скриншот экрана](Ex6.1/screen-07.JPG)
 ## Задача 6.2.
 Сохранение файла из docker image (в выводе первой команды нет каталога save) 
-[Скриншот экрана](Ex6.2/screen-08.JPG)
+[Скриншот экрана](Ex6.2/screen-08.JPG)  
+Использовался [ресурс](https://stackoverflow.com/questions/63242674/how-to-copy-files-from-a-docker-image-dockerfile-cmd)
