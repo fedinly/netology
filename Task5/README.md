@@ -13,7 +13,7 @@
 - На следующем скриншоте представлено два окна, в одном - docker-cli context на облачную VM, в другом - подключено с помощью yc compute ssh к самой удаленной  VM, ID контейнеров выделены (совпадают).  
 [Скриншот экрана - docker context](Ex4/screen-03.JPG) 
 ## Задача 5.
-- [Скриншот выполнения команды - одноразовый бэкап БД](Ex5/screen-11.JPG). При этом в `comnpose.yaml` файле прописана инструкция в секции `db`: `command: --mysql-native-password=ON`. Cоздан пользователь БД с параметром `IDENTIFIED WITH mysql_native_password`. Скрипт бэкапа в git-репозитории - backup.sh (с явно заданными паролями).  
+- [Скриншот выполнения команды - одноразовый бэкап БД](Ex5/screen-11.JPG). При этом в `comnpose.yaml` файле прописана инструкция в секции `db`: `command: --mysql-native-password=ON`. Cоздан пользователь БД специально для выполнения mysqldump с параметром `IDENTIFIED WITH mysql_native_password`. Скрипт бэкапа в git-репозитории - backup.sh (с явно заданными паролями).  
 ## Задача 6.  
 В dive вывод отпечатка: `1a704e41dec03e4b8aab289f78ddb96567a8898b766d` (другой)  
 Вывод docker save: [Скриншот экрана 1](Ex6/screen-05.JPG)  [Скриншот экрана 2](Ex6/screen-06.JPG)
