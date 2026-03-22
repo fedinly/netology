@@ -10,8 +10,8 @@
   keep_locally = true
   }
     ```
-   Вторая ошибка в имени docker-контейнера, имя не может начинаться с цифры: `resource "docker_container" "1nginx"` - исправлено на "nginx".
-   Третья ошибка в строеке `name  = "example_${random_password.random_string_FAKE.resulT}"`, нужно исправить на те значения, что ранее указаны в блоке `resource "random_password" "random_string"`, т.е.       "random_string" и .result.
+   Вторая ошибка в имени docker-контейнера, имя не может начинаться с цифры: `resource "docker_container" "1nginx"` - исправлено на "nginx".  
+   Третья ошибка в строке `name  = "example_${random_password.random_string_FAKE.resulT}"`, нужно исправить на те значения, что ранее указаны в блоке `resource "random_password" "random_string"`, т.е.       "random_string" и .result.
    Исправленный код:
    ```
    resource "docker_image" "nginx" {
@@ -29,6 +29,7 @@
      }
    }
    ```
+   Вывод docker ps:
    ```
       CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
    355903d0ad19   dec7a90bd097   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:9090->80/tcp   example_XdaYB8mDGRew2b0p
