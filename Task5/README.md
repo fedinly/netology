@@ -14,7 +14,7 @@
 [Скриншот экрана - docker context](Ex4/screen-03.JPG) 
 ## Задача 5.
 - [Скриншот выполнения команды - одноразовый бэкап БД](Ex5/screen-11.JPG). При этом в `comnpose.yaml` файле прописана инструкция в секции `db`: `command: --mysql-native-password=ON`. Cоздан пользователь БД специально для выполнения mysqldump с параметром `IDENTIFIED WITH mysql_native_password`. Скрипт бэкапа в git-репозитории - backup.sh (с явно заданными паролями).
-- По задаче создания бэкапов по расписанию было принято решение согласно документации к образу создать отдельный файл compose  и импортировать в текущую конфигурацию сервиса.  
+- По задаче создания бэкапов по расписанию было принято решение согласно документации к образу создать отдельный файл compose  и импортировать в текущую конфигурацию сервиса. [Ссылка на репозиторий с измениями](https://github.com/fedinly/shvirtd-example-python.git)  
 При этом в созданном контейнере cron подключение утилитой mysqldump к БД не выполнялось, ошибка [Скриншот](Ex5/screen-12.JPG).  
 С прописанной в compose строкой `command: "--default-authentication-plugin=mysql_native_password"` контейнер не запускался, ошибка unknown variable [Скриншот](Ex5/screen-13.JPG).  
 Была прописана строка в compose: `--mysql-native-password=ON` (из документации к mysql:8), при этом пользователь по умолчанию создался с методом аутентификации caching_sha2_password [Скриншот](Ex5/screen-14.JPG).  
@@ -24,6 +24,7 @@
 ```
 mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces
 ```
+При этом судя по выводу запроса MySQL привелегий на БД у пользователя хватает, пользователь прописан в контейнере cron верный. [Скриншот вывода запроса](Ex5/screen-18.JPG).
 ## Задача 6. 
 В dive вывод отпечатка: `1a704e41dec03e4b8aab289f78ddb96567a8898b766d` (другой)  
 Вывод docker save: [Скриншот экрана 1](Ex6/screen-05.JPG)  [Скриншот экрана 2](Ex6/screen-06.JPG)
