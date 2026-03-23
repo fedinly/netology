@@ -48,4 +48,9 @@
    }
   ```
  Вывод `docker ps -a` не показывает существующих контейнеров.
-- Образ сохранился потому, что в соответствующем разделе recource он был создан с параметром `keep_locally = true`, 
+- Образ сохранился потому, что в соответствующем разделе recource он был создан с параметром `keep_locally = true`, подсказка VS Code говорит об этом (не будет удален при destroy):
+  ```
+  keep_locally optional, bool
+
+   If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+  ```
