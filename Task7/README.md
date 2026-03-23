@@ -1,7 +1,7 @@
 # Домашнее задание к занятию «Введение в Terraform»
 [Cкриншот вывода команды terraform --version](Intro/screen-01.JPG)
 ## Задание 1
-- Можно хранить данные в .terraform
+- Можно хранить чувствительные данные в каталоге .terraform
 - Сгенерированные ключ:значение ` "result": "XdaYB8mDGRew2b0p",`
 - Ошибка `Not enough labels specified for "resource": All "resource" blocks must have 2 label(s)` на строке 23 говорит о том, что блок resource оформлен неверно, и должен быть ключ, в данном случае с названием образа. Необходимо то, что указано позднее в блоке `resource "docker_container" "nginx"` в строке `image = docker_image.nginx.image_id`, т.е. "nginx".
    ```
@@ -54,4 +54,6 @@
 
    If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
   ```
-  Также это объяснение дано в [документации](https://library.tf/providers/kreuzwerker/docker/latest/docs/resources/image), раздел `Optional`
+  Также это объяснение дано в [документации](https://library.tf/providers/kreuzwerker/docker/latest/docs/resources/image), раздел `Optional`.  
+## Задание 2
+
