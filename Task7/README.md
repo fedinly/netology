@@ -34,3 +34,4 @@
       CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
    355903d0ad19   dec7a90bd097   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:9090->80/tcp   example_XdaYB8mDGRew2b0p
    ```
+- -auto-approve пропускает интерактивное подтверждение (yes), автоматически применяя изменения. Опасность может состоять в том, что команда terraform apply после выполнения terraform init включает в себя команды terraform plan, terraform validate, т.е. мы не сможем воспользоваться результатом выполнения этих команд и не сможем проверить, какие настройки будут применяться.
