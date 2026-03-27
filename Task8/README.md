@@ -2,3 +2,4 @@
 ## Задание 1.
 - Ошибка при terraform apply `Quota limit vpc.networks.count exceeded` говорит о том, что превышена квота "Количество облачных сетей" (2/2), можно увеличить до 6 (например). Интерфейс завис, но применился.
 - Ошибка `code = FailedPrecondition desc = Platform "standart-v4" not found` говорит о том, что данная версия platform-id не поддерживается, необходимо задать `standard-v1` для заданного уровня производительности 5%, и параметр количество ядер `cores = 2`, [link](https://yandex.cloud/ru/docs/compute/concepts/vm-platforms).
+- [Скриншот ifconfig.me](Ex1/Screen-21.png). Параметр preemptible = true позволяет сделать ВМ выключаемой по расписанию Yandex, т.е. работающей не постоянно, core_fraction=5 - уровень использования ядер процессора. Оба параметра позволяют сильно сэкономить на ВМ при обучении.
