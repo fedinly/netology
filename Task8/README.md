@@ -9,3 +9,5 @@
 - [Скриншот консоли YC](Ex3/Screen-24.png)
 ## Задание 4.
 - [Скриншот вывода terraform output](Ex4/Screen-25.png)
+## Задание 5.
+- [Скриншот](Ex4/Screen-25.png)
