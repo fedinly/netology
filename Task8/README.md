@@ -10,5 +10,5 @@
 ## Задание 4.
 - [Скриншот вывода terraform output](Ex4/Screen-25.png)
 ## Задание 5.
-- [Скриншот изменений](Ex5/Screen-27.png), [Скриншот вывода terraform plan](Ex5/Screen-26.png)
+- [Скриншот изменений](Ex5/Screen-27.png), [Скриншот вывода terraform plan](Ex5/Screen-28.png)
 ## Задание 6.
