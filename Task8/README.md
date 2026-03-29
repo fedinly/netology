@@ -1,5 +1,5 @@
 # Решение Домашнего задания к занятию «Основы Terraform. Yandex Cloud»
-Файлы представлены в [репозитории.](https://github.com/fedinly/task8_tf.git)
+Файлы проекта в Terraform представлены в [репозитории.](https://github.com/fedinly/task8_tf.git)
 ## Задание 1.
 - Ошибка при terraform apply `Quota limit vpc.networks.count exceeded` говорит о том, что превышена квота "Количество облачных сетей" (2/2), можно увеличить до 6 (например). Интерфейс завис, но применился.
 - Ошибка `code = FailedPrecondition desc = Platform "standart-v4" not found` говорит о том, что данная версия platform-id не поддерживается, необходимо задать `standard-v1` для заданного уровня производительности 5%, и параметр количество ядер `cores = 2`, [link](https://yandex.cloud/ru/docs/compute/concepts/vm-platforms).
