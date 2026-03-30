@@ -20,4 +20,4 @@
 - Необходимо ввести `local.test_list[1]`, получим второй элемент `"staging"`;
 - Необходимо ввести `length(local.test_list)`, получим 3;
 - Необходимо ввести `local.test_map["admin"]`, получим `"John"`;
-- 
+- Необходимо ввести `join(" ",[local.test_map["admin"]],["is"],[keys(local.test_map)[0]],["of"],[local.test_list[2]],["server, based on OS"],[local.servers.production.image],["with"],[local.servers.production.cpu],["vcpu,"],[local.servers.production.ram],["vram and"],[length(local.servers.production.disks)],["virtual disks"])`, получим строку `"John is admin of production server, based on OS ubuntu-20-04 with 10 vcpu, 40 vram and 4 virtual disks"`
