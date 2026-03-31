@@ -22,6 +22,16 @@
 - Необходимо ввести `local.test_map["admin"]`, получим `"John"`;
 - Необходимо ввести `join(" ",[local.test_map["admin"]],["is"],[keys(local.test_map)[0]],["of"],[local.test_list[2]],["server, based on OS"],[local.servers.production.image],["with"],[local.servers.production.cpu],["vcpu,"],[local.servers.production.ram],["vram and"],[length(local.servers.production.disks)],["virtual disks"])`, получим строку `"John is admin of production server, based on OS ubuntu-20-04 with 10 vcpu, 40 vram and 4 virtual disks"`
 ## Задание 8.
-- Данные значения похожи нп list(object()), но в этом случае в объектах должны использоваться ключи с одним и тем же именем (напр., srv_name, connect_string). В нашем случае ключи и значения разные, ошибка `Error: Invalid value for input variable`.
+- Данные значения похожи нп list(object()), но в этом случае в объектах должны использоваться ключи с одним и тем же именем (напр., srv_name, connect_string). В нашем случае ключи и значения разные, ошибка `Error: Invalid value for input variable`.  
+- Эти значения переменной из файла terraform.tfvars удалось передать переменной только в следующем случае:
+  ```
+    variable "test" {
+      type = list(map(list(string)))
+
+      default = [{"dev1"=["ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117","10.0.1.7",]}]
+    }
+  ```
+- При таком задании переменной получить требуемое значение в консоли можно с помощью кода
+  `var.test[0].dev1[0]`
 ## Задание 9.
 - [Скриншот вывода параметров vm утилитой yc](Ex9/Screen-30.png), [Проверка на первой VM](Ex9/Screen-31.png), [Проверка на второй VM](Ex9/Screen-32.png)
