@@ -7,7 +7,6 @@
 ## Задание 2.
 - [Скриншот, вызов terraform plan, отсутствие изменений](Ex2/Screen-23.png)
 ## Задание 3.
-- <img src="Ex3/Screen-24.png) alt="Скриншот консоли YC" width="500"/>
 - [Скриншот консоли YC](Ex3/Screen-24.png)
 ## Задание 4.
 - [Скриншот вывода terraform output](Ex4/Screen-25.png)
@@ -23,5 +22,6 @@
 - Необходимо ввести `local.test_map["admin"]`, получим `"John"`;
 - Необходимо ввести `join(" ",[local.test_map["admin"]],["is"],[keys(local.test_map)[0]],["of"],[local.test_list[2]],["server, based on OS"],[local.servers.production.image],["with"],[local.servers.production.cpu],["vcpu,"],[local.servers.production.ram],["vram and"],[length(local.servers.production.disks)],["virtual disks"])`, получим строку `"John is admin of production server, based on OS ubuntu-20-04 with 10 vcpu, 40 vram and 4 virtual disks"`
 ## Задание 8.
+- Данные значения похожи нп list(object()), но в этом случае в объектах должны использоваться ключи с одним и тем же именем (напр., srv_name, connect_string). В нашем случае ключи и значения разные.
 ## Задание 9.
 - [Скриншот вывода параметров vm утилитой yc](Ex9/Screen-30.png), [Проверка на первой VM](Ex9/Screen-31.png), [Проверка на второй VM](Ex9/Screen-32.png)
