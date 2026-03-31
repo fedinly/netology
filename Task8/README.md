@@ -7,6 +7,7 @@
 ## Задание 2.
 - [Скриншот, вызов terraform plan, отсутствие изменений](Ex2/Screen-23.png)
 ## Задание 3.
+- <img src="Ex3/Screen-24.png) alt="Скриншот консоли YC" width="500"/>
 - [Скриншот консоли YC](Ex3/Screen-24.png)
 ## Задание 4.
 - [Скриншот вывода terraform output](Ex4/Screen-25.png)
