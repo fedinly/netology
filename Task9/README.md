@@ -1,4 +1,3 @@
 # Решение Домашнего задания к занятию «Управляющие конструкции в коде Terraform»
 ## Задание 1.
-- ![Скриншот консоли YC](Ex1/Screen-33.png)
-<img src="Ex1/Screen-33.png" width="500" height="300">
+<img src="Ex1/Screen-33.png" width="350" height="300">
