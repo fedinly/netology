@@ -6,8 +6,8 @@
 
 <img src="Ex2/Screen-36.png" alt="Скриншот консоли YC" width="770" height="230">
 Очередность создания VM:  
-<img src="Ex2/Screen-35.png" alt="Скриншот VSCode" width="270" height="90">
+<img src="Ex2/Screen-35.png" alt="Скриншот VSCode" width="370" height="150">
 
 ## Задание 3.
-<img src="/docs/images/Task9/Screen-37.png" alt="Скриншот - созданные диски" width="270" height="190">
-<img src="/docs/images/Task9/Screen-38.png" alt="Скриншот - созданные ВМ" width="270" height="190">
+<img src="/docs/images/Task9/Screen-37.png" alt="Скриншот - созданные диски" width="370" height="190">
+<img src="/docs/images/Task9/Screen-38.png" alt="Скриншот - созданные ВМ" width="370" height="190">
