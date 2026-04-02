@@ -8,5 +8,5 @@
 Очередность создания VM:  
 <img src="Ex2/Screen-35.png" alt="Скриншот VSCode" width="270" height="90">
 ## Задание 3.
-<img src="Ex3/Screen-37.png" alt="Скриншот - созданные диски" width="270" height="190">
-<img src="Ex3/Screen-38.png" alt="Скриншот - созданные ВМ" width="270" height="190">
+<img src="docs/images/Task9/Screen-37.png" alt="Скриншот - созданные диски" width="270" height="190">
+<img src="docs/images/Task9/Screen-38.png" alt="Скриншот - созданные ВМ" width="270" height="190">
