@@ -21,6 +21,7 @@
 - Инвентарь для серверов из групп webservers, databases позволяет создать боле 2 ВМ, т.к. машины создаются циклически; для ВМ storage динамически создаются только доп.диски, ВМ в единственном экземпляре.
   
 ## Задание 8.
-- Ошибка `Invalid character; This character is not used within the language., and 1 other diagnostic(s).`  
+- Ошибка terrafdorm plan: `Invalid character; This character is not used within the language., and 1 other diagnostic(s).`  
   Необходимо верно расставить закрывающие скобки `}`, т.е. нужно поставить вслед за строкой `"nat_ip_address"]` и убрать в конце строки. Также необходимо убрать пробел в строке `i["platform_id "]`.  
-  <img src="/docs/images/Task9/Screen-40.png" alt="Скриншот - созданные ВМ" width="470" height="250">  
+  Скрин hosts.ini после вставки исправленного кода:  
+  <img src="/docs/images/Task9/Screen-40.png" alt="Скриншот hosts.ini" width="470" height="250">  
