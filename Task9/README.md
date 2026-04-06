@@ -25,7 +25,11 @@
   1) Создаем 3 локальные переменные (по видам ВМ), каждая - цикл по соответствующему инстансу, получаем словари;
   2) Т.к. значение keys(local.vm"N") N=1..3 в кажом из 3-х случаев равно "vms", то значение выражения `distinct(concat(keys(local.vm1), keys(local.vm2), keys(local.vm3)))` равно `[ "vms" ]`; это значение подставится как ключ в итоговом словаре;
   3) value для цикла for получается в результате объединения значений переменных local.vm"N", т.е. получаем список словарей.  
-  <img src="/docs/images/Task9/Screen-41.png" alt="Скриншот output" width="390" height="390">     
+  <img src="/docs/images/Task9/Screen-41.png" alt="Скриншот output" width="390" height="390">
+P.S. Спасибо за наводку по поводу merge.  
+
+## Задание 6.
+
 ## Задание 8.
 - Ошибка terrafdorm plan: `Invalid character; This character is not used within the language., and 1 other diagnostic(s).`  
   Необходимо верно расставить закрывающие скобки `}`, т.е. нужно поставить вслед за строкой `"nat_ip_address"]` и убрать в конце строки. Также необходимо убрать пробел в строке `i["platform_id "]`.  
