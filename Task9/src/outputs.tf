@@ -1,4 +1,4 @@
-variable "vms" {
+/*variable "vms" {
   description = "vms"
 
   type = map(list(object(
@@ -12,42 +12,36 @@ variable "vms" {
     "web" = [ {
       name = "1"
       id = "fdfsf"
-      fqdn = "fdefsdf.a.b"
+      fqdn = "fdefsdf"
     } ],
   }
 }
-
-output "storage" {
-  value = "${zipmap(["name", "id", "fqdn"], [yandex_compute_instance.storage.name, yandex_compute_instance.storage.id, yandex_compute_instance.storage.fqdn])}"
-}
-output "instance_web" {
-  value = zipmap(
-    [for k, v in yandex_compute_instance.web : k],      # List of keys (names)
-    [for k, v in yandex_compute_instance.web : {
-      id =v.id,
-      name = v.name,
-      fqdn = v.fqdn }
-    ]   # List of values (IDs)
-  )
-}
-output "instance_db" {
-  value = zipmap(
-    [for k, v in yandex_compute_instance.db : k],      # List of keys (names)
-    [for k, v in yandex_compute_instance.db : {
-      id =v.id,
-      name = v.name,
-      fqdn = v.fqdn }
-    ]   # List of values (IDs)
-  )
-}
-/*output "instance_storage" {
-  value = zipmap(
-    [for k, v in yandex_compute_instance.storage : k],      # List of keys (names)
-    [for k, v in yandex_compute_instance.storage : {
-      id =v.id,
-      name = v.name,
-      fqdn = v.fqdn }
-    ]   # List of values (IDs)
-  )
-}
 */
+locals  {
+  vm1 = {vms = [for i in yandex_compute_instance.web : {
+    id   = i .id,
+    name = i.name,
+    fqdn = i.fqdn
+  }]}  
+  vm2 = {vms = [for i in yandex_compute_instance.db : {
+    id   = i.id,
+    name = i.name,
+    fqdn = i.fqdn
+  }]}
+  vm3 = {vms = [for i in yandex_compute_instance.storage.* : {
+    id   = i.id,
+    name = i.name,
+    fqdn = i.fqdn
+  }]}
+  deep_merged = {
+    for key in distinct(concat(keys(local.vm1), keys(local.vm2), keys(local.vm3))) :
+    key => concat(
+      lookup(local.vm1, key, []),
+      lookup(local.vm2, key, []),
+      lookup(local.vm3, key, [])
+    )
+  }  
+}
+output "test" {
+  value = local.deep_merged
+}
