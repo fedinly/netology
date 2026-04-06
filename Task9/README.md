@@ -1,5 +1,5 @@
 # Решение Домашнего задания к занятию «Управляющие конструкции в коде Terraform»
-[Ссылка на репозиторий с кодом](https://github.com/fedinly/netology/tree/c2aa0c8df1c298c0063c631961c7141a888e190f/Task9/src)  
+[Ссылка на репозиторий с кодом](https://github.com/fedinly/netology/tree/6513d50c716927eed22107998e157d15f3f03c0f/Task9/src)  
 ## Задание 1.
 - Скриншот консоли YC
 <img src="Ex1/Screen-33.png" alt="Скриншот консоли YC" width="370" height="330">  
