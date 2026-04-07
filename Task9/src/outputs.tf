@@ -43,5 +43,5 @@ locals  {
   }  
 }
 output "test" {
-  value = local.deep_merged
+  value = [for k,v in local.deep_merged : v]
 }
