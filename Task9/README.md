@@ -44,13 +44,13 @@ P.S. Спасибо за наводку по поводу merge.
 - Создан файл main.tf:
   ```
   locals {
-  from_list       = concat([for i in range(1,10,1) : "rc0${i}"],[for i in range(10,100,1) : "rc${i}"])
-  exclude         = concat([for j in range(6,97,10) : j],[for j in range(7,98,10) : j], [for j in range(28,99,10) : j], [for j in range(9,100,10) : j], [8])
-  exclude_strings = formatlist("%02d",local.exclude)
-  sorted_strings  = sort(local.exclude_strings)
-  sorted_exclude  = [for s in local.sorted_strings : tonumber(s)]
-  to_list         = [for k, val in local.from_list: val
-    if !contains(local.exclude, k)]
+    from_list       = concat([for i in range(1,10,1) : "rc0${i}"],[for i in range(10,100,1) : "rc${i}"])
+    exclude         = concat([for j in range(6,97,10) : j],[for j in range(7,98,10) : j], [for j in range(28,99,10) : j], [for j in range(9,100,10) : j], [8])
+    exclude_strings = formatlist("%02d",local.exclude)
+    sorted_strings  = sort(local.exclude_strings)
+    sorted_exclude  = [for s in local.sorted_strings : tonumber(s)]
+    to_list         = [for k, val in local.from_list: val
+      if !contains(local.exclude, k)]
   }
   output "final" {
     value = join(",", local.to_list)
