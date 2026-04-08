@@ -30,8 +30,8 @@
     
 P.S. Спасибо за наводку по поводу merge.  
 
-## Задание 6.
-- Код представлен в начале документа.  
+## Задание 6.  
+
 ## Задание 8.
 - Ошибка terrafdorm plan: `Invalid character; This character is not used within the language., and 1 other diagnostic(s).`  
   Необходимо верно расставить закрывающие скобки `}`, т.е. нужно поставить вслед за строкой `"nat_ip_address"]` и убрать в конце строки. Также необходимо убрать пробел в строке `i["platform_id "]`.  
