@@ -37,3 +37,7 @@ P.S. Спасибо за наводку по поводу merge.
   Необходимо верно расставить закрывающие скобки `}`, т.е. нужно поставить вслед за строкой `"nat_ip_address"]` и убрать в конце строки. Также необходимо убрать пробел в строке `i["platform_id "]`.  
   Скрин hosts.ini после вставки исправленного кода:  
   <img src="/docs/images/Task9/Screen-40.png" alt="Скриншот hosts.ini" width="470" height="250">  
+## Задание 9.
+- Требуется в terraform console ввести выражение:
+  `join(",", concat([for i in range (1,10,1): "rc0${i}"],[for i in range (10,100,1): "rc${i}"]))`, получим список в ввиде строки:  
+   <img src="/docs/images/Task9/Screen-42.png" alt="Скриншот console 1" width="470" height="50">  
