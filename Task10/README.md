@@ -13,3 +13,9 @@
   ## Задача 3.
   - terraform state list  
   <img src="/docs/images/Task10/Screen-49.png" alt="Скриншот terraform state" width="370" height="250">  
+  - Команды
+    `terraform state rm module.vpc_dev_net`;  
+    убрана секция module;
+    `terraform import 'module.vpc_dev_net.yandex_vpc_network.vpc_dev_net' _id_`;  
+    `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`;  
+    `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`  
