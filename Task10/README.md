@@ -5,4 +5,7 @@
 - Скриншот свойств ВМ
   <img src="/docs/images/Task10/Screen-46.png" alt="Скриншот свойств ВМ" width="470" height="370">  
 - Скриншот вывода terraform console
-  <img src="/docs/images/Task10/Screen-47.png" alt="Скриншот terraform console" width="470" height="300">  
+  <img src="/docs/images/Task10/Screen-47.png" alt="Скриншот terraform console" width="470" height="300">
+  ## Задача 2.
+- Скриншот вывода terraform console
+  <img src="/docs/images/Task10/Screen-48.png" alt="Скриншот terraform console" width="270" height="150">  
