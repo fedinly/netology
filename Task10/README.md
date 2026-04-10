@@ -12,4 +12,4 @@
   [Ссылка на папку vms с кодом](https://github.com/fedinly/netology/tree/fddb42f60aaedd2d9714f143806f2990ab03f8ce/Task10/vms)
   ## Задача 3.
   - terraform state list  
-  <img src="/docs/images/Task10/Screen-49.png" alt="Скриншот terraform state" width="270" height="150">  
+  <img src="/docs/images/Task10/Screen-49.png" alt="Скриншот terraform state" width="370" height="250">  
