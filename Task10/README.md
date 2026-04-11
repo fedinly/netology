@@ -136,14 +136,14 @@ Plan: 4 to add, 0 to change, 0 to destroy.
   
   Terraform will perform the following actions:
 
-  # module.data.yandex_mdb_mysql_database.test-db will be created
+  \# module.data.yandex_mdb_mysql_database.test-db will be created  
   + resource "yandex_mdb_mysql_database" "test-db" {
       + cluster_id = "c9q86jnjufktjgvf6eqv"
       + id         = (known after apply)
       + name       = "test"
     }
 
-  # module.data.yandex_mdb_mysql_user.test-db-user will be created
+  \# module.data.yandex_mdb_mysql_user.test-db-user will be created  
   + resource "yandex_mdb_mysql_user" "test-db-user" {
       + authentication_plugin = (known after apply)
       + cluster_id            = "c9q86jnjufktjgvf6eqv"
@@ -167,7 +167,7 @@ Terraform used the selected providers to generate the following execution plan. 
 
 Terraform will perform the following actions:
 
-  # module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place
+  \# module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place  
   ~ resource "yandex_mdb_mysql_user" "test-db-user" {
         id                 = "c9q86jnjufktjgvf6eqv:app"
         name               = "app"
@@ -181,7 +181,7 @@ Terraform will perform the following actions:
         }
     }
 
-  # module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place
+  \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place  
   ~ resource "yandex_mdb_mysql_cluster" "test_cluster" {
         id                        = "c9q86jnjufktjgvf6eqv"
         name                      = "example"
