@@ -20,6 +20,8 @@
  `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`;  
  `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`  
 ## Задача 4.
-- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7668e73ffad8c60b522141b60ffc304882ee779d/Task10/Ex4)  
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7668e73ffad8c60b522141b60ffc304882ee779d/Task10/Ex4)
+  В соответствии с документацией к Terraform, разные модули не могут располагаться в одной директории, поэтому была создана папка modules, и в ней подпапки с модулями.  
+  Также были исправлены зоны доступности, добавлена зона ru-central1-d вместо ru-central1-с. В этой зоне доступны платформы standard-v2, standard-v3, исправлено локально в модуле.  
 <img src="/docs/images/Task10/Screen-52.png" alt="Скриншот terraform state" width="570" height="350">
 <img src="/docs/images/Task10/Screen-53.png" alt="Скриншот terraform state" width="470" height="350">
