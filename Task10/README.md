@@ -28,7 +28,8 @@
 
 ## Задача 5.
 <details>
-<summary>План выполнения (нажмите, чтобы развернуть)</summary>
+<summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+  
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:  
   \+ create  
 
@@ -122,3 +123,38 @@ Terraform will perform the following actions:
     }
 
 Plan: 4 to add, 0 to change, 0 to destroy.
+</details>  
+Скриншоты консоли yandex:  
+<img src="/docs/images/Task10/Screen-54.png" alt="Скриншот terraform state" width="570" height="570">  
+<img src="/docs/images/Task10/Screen-55.png" alt="Скриншот terraform state" width="570" height="350">
+- Создание БД и пользователя  
+<details>
+<summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+  
+  Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+    + create
+  
+  Terraform will perform the following actions:
+
+  /# module.data.yandex_mdb_mysql_database.test-db will be created
+  + resource "yandex_mdb_mysql_database" "test-db" {
+      + cluster_id = "c9q86jnjufktjgvf6eqv"
+      + id         = (known after apply)
+      + name       = "test"
+    }
+
+  /# module.data.yandex_mdb_mysql_user.test-db-user will be created
+  + resource "yandex_mdb_mysql_user" "test-db-user" {
+      + authentication_plugin = (known after apply)
+      + cluster_id            = "c9q86jnjufktjgvf6eqv"
+      + connection_manager    = (known after apply)
+      + generate_password     = false
+      + id                    = (known after apply)
+      + name                  = "app"
+      + password              = (sensitive value)
+
+      + connection_limits (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+</details>
