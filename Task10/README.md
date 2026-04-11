@@ -29,21 +29,19 @@
 ## Задача 5.
 <details>
 <summary>План выполнения (нажмите, чтобы развернуть)</summary>
-
-### Скрытый контент
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
 
 Terraform will perform the following actions:
 
-  # module.data.yandex_mdb_mysql_database.test-db will be created
+  \# module.data.yandex_mdb_mysql_database.test-db will be created
   + resource "yandex_mdb_mysql_database" "test-db" {
       + cluster_id = (known after apply)
       + id         = (known after apply)
         name       = null
     }
 
-  # module.data.yandex_mdb_mysql_user.test-db-user will be created
+  \# module.data.yandex_mdb_mysql_user.test-db-user will be created
   + resource "yandex_mdb_mysql_user" "test-db-user" {
       + authentication_plugin = (known after apply)
       + cluster_id            = (known after apply)
@@ -55,7 +53,7 @@ Terraform will perform the following actions:
       + connection_limits (known after apply)
     }
 
-  # module.dev_net.yandex_vpc_network.dev_net will be created
+  \# module.dev_net.yandex_vpc_network.dev_net will be created
   + resource "yandex_vpc_network" "dev_net" {
       + created_at                = (known after apply)
       + default_security_group_id = (known after apply)
@@ -66,7 +64,7 @@ Terraform will perform the following actions:
       + subnet_ids                = (known after apply)
     }
 
-  # module.dev_net.yandex_vpc_subnet.dev_subn_a will be created
+  \# module.dev_net.yandex_vpc_subnet.dev_subn_a will be created
   + resource "yandex_vpc_subnet" "dev_subn_a" {
       + created_at     = (known after apply)
       + folder_id      = (known after apply)
@@ -81,7 +79,7 @@ Terraform will perform the following actions:
       + zone           = "ru-central1-a"
     }
 
-  # module.dev_net.yandex_vpc_subnet.dev_subn_d will be created
+  \# module.dev_net.yandex_vpc_subnet.dev_subn_d will be created
   + resource "yandex_vpc_subnet" "dev_subn_d" {
       + created_at     = (known after apply)
       + folder_id      = (known after apply)
@@ -96,7 +94,7 @@ Terraform will perform the following actions:
       + zone           = "ru-central1-d"
     }
 
-  # module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be created
+  \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be created
   + resource "yandex_mdb_mysql_cluster" "test_cluster" {
       + allow_regeneration_host   = false
       + backup_retain_period_days = (known after apply)
