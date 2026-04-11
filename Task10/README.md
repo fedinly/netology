@@ -27,7 +27,7 @@
 <img src="/docs/images/Task10/Screen-53.png" alt="Скриншот terraform state" width="470" height="350">
 
 ## Задача 5.
-- [Ссылка на папку с кодом](ttps://github.com/fedinly/netology/tree/14fb32150e1b462f2e63aff570aa98acaa984033/Task10/Ex5)  
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/14fb32150e1b462f2e63aff570aa98acaa984033/Task10/Ex5)  
   <details>
   <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
     
@@ -125,81 +125,82 @@
   
   Plan: 4 to add, 0 to change, 0 to destroy.
   </details>  
+  
   Скриншоты консоли yandex:  
   <img src="/docs/images/Task10/Screen-54.png" alt="Скриншот terraform state" width="570" height="570">  
   <img src="/docs/images/Task10/Screen-55.png" alt="Скриншот terraform state" width="570" height="350">
 - Создание БД и пользователя  
-<details>
-<summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+  <details>
+  <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+    
+    Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+      + create
+    
+    Terraform will perform the following actions:
+  
+    \# module.data.yandex_mdb_mysql_database.test-db will be created  
+    + resource "yandex_mdb_mysql_database" "test-db" {
+        + cluster_id = "c9q86jnjufktjgvf6eqv"
+        + id         = (known after apply)
+        + name       = "test"
+      }
+  
+    \# module.data.yandex_mdb_mysql_user.test-db-user will be created  
+    + resource "yandex_mdb_mysql_user" "test-db-user" {
+        + authentication_plugin = (known after apply)
+        + cluster_id            = "c9q86jnjufktjgvf6eqv"
+        + connection_manager    = (known after apply)
+        + generate_password     = false
+        + id                    = (known after apply)
+        + name                  = "app"
+        + password              = (sensitive value)
+  
+        + connection_limits (known after apply)
+      }
+  
+  Plan: 2 to add, 0 to change, 0 to destroy.
+  </details>
+- Создание дополнительного хоста
+  <details>
+  <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
   
   Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-    + create
+    ~ update in-place
   
   Terraform will perform the following actions:
-
-  \# module.data.yandex_mdb_mysql_database.test-db will be created  
-  + resource "yandex_mdb_mysql_database" "test-db" {
-      + cluster_id = "c9q86jnjufktjgvf6eqv"
-      + id         = (known after apply)
-      + name       = "test"
-    }
-
-  \# module.data.yandex_mdb_mysql_user.test-db-user will be created  
-  + resource "yandex_mdb_mysql_user" "test-db-user" {
-      + authentication_plugin = (known after apply)
-      + cluster_id            = "c9q86jnjufktjgvf6eqv"
-      + connection_manager    = (known after apply)
-      + generate_password     = false
-      + id                    = (known after apply)
-      + name                  = "app"
-      + password              = (sensitive value)
-
-      + connection_limits (known after apply)
-    }
-
-Plan: 2 to add, 0 to change, 0 to destroy.
-</details>
-- Создание дополнительного хоста
-<details>
-<summary>План выполнения (нажмите, чтобы развернуть)</summary>  
-
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-  ~ update in-place
-
-Terraform will perform the following actions:
-
-  \# module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place  
-  ~ resource "yandex_mdb_mysql_user" "test-db-user" {
-        id                 = "c9q86jnjufktjgvf6eqv:app"
-        name               = "app"
-        # (5 unchanged attributes hidden)
-
-      - permission {
-          - database_name = "test" -> null
-          - roles         = [
-              - "ALL",
-            ] -> null
-        }
-    }
-
-  \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place  
-  ~ resource "yandex_mdb_mysql_cluster" "test_cluster" {
-        id                        = "c9q86jnjufktjgvf6eqv"
-        name                      = "example"
-        # (15 unchanged attributes hidden)
-
-      + host {
-          + assign_public_ip = false
-          + name             = "example-replica-2"
-          + priority         = 10
-          + subnet_id        = "fl8og3qp2r2130or1c8l"
-          + zone             = "ru-central1-d"
-        }
-
-        # (7 unchanged blocks hidden)
-    }
-
-Plan: 0 to add, 2 to change, 0 to destroy.
-</details>  
-Скриншот консоли yandex:  
-<img src="/docs/images/Task10/Screen-56.png" alt="Скриншот terraform state" width="570" height="350">  
+  
+    \# module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place  
+    ~ resource "yandex_mdb_mysql_user" "test-db-user" {
+          id                 = "c9q86jnjufktjgvf6eqv:app"
+          name               = "app"
+          # (5 unchanged attributes hidden)
+  
+        - permission {
+            - database_name = "test" -> null
+            - roles         = [
+                - "ALL",
+              ] -> null
+          }
+      }
+  
+    \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place  
+    ~ resource "yandex_mdb_mysql_cluster" "test_cluster" {
+          id                        = "c9q86jnjufktjgvf6eqv"
+          name                      = "example"
+          # (15 unchanged attributes hidden)
+  
+        + host {
+            + assign_public_ip = false
+            + name             = "example-replica-2"
+            + priority         = 10
+            + subnet_id        = "fl8og3qp2r2130or1c8l"
+            + zone             = "ru-central1-d"
+          }
+  
+          # (7 unchanged blocks hidden)
+      }
+  
+  Plan: 0 to add, 2 to change, 0 to destroy.
+  </details>  
+  Скриншот консоли yandex:  
+  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот terraform state" width="570" height="350">  
