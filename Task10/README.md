@@ -93,30 +93,31 @@ Terraform will perform the following actions:
       \+ network_id                = (known after apply)
       \+ status                    = (known after apply)
       \+ version                   = "8.0"
-      \+ access (known after apply)
+      
+      + access (known after apply)
 
-      \+ backup_window_start (known after apply)
+      + backup_window_start (known after apply)
 
-      \+ disk_size_autoscaling (known after apply)
+      + disk_size_autoscaling (known after apply)
 
-      \+ host {
-          \+ assign_public_ip   = false
-          \+ fqdn               = (known after apply)
-          \+ name               = "example-replica-1"
-          \+ priority           = 0
-          \+ replication_source = (known after apply)
-          \+ subnet_id          = (known after apply)
-          \+ zone               = "ru-central1-a"
+      + host {
+          + assign_public_ip   = false
+          + fqdn               = (known after apply)
+          + name               = "example-replica-1"
+          + priority           = 0
+          + replication_source = (known after apply)
+          + subnet_id          = (known after apply)
+          + zone               = "ru-central1-a"
         }
 
-      \+ maintenance_window (known after apply)
+      + maintenance_window (known after apply)
 
-      \+ performance_diagnostics (known after apply)
+      + performance_diagnostics (known after apply)
 
-      \+ resources {
-          \+ disk_size          = 16
-          \+ disk_type_id       = "network-ssd"
-          \+ resource_preset_id = "s2.micro"
+      + resources {
+          + disk_size          = 16
+          + disk_type_id       = "network-ssd"
+          + resource_preset_id = "s2.micro"
         }
     }
 
