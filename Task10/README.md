@@ -93,7 +93,6 @@ Terraform will perform the following actions:
       \+ network_id                = (known after apply)
       \+ status                    = (known after apply)
       \+ version                   = "8.0"
-
       \+ access (known after apply)
 
       \+ backup_window_start (known after apply)
