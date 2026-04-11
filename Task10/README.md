@@ -136,14 +136,14 @@ Plan: 4 to add, 0 to change, 0 to destroy.
   
   Terraform will perform the following actions:
 
-  /# module.data.yandex_mdb_mysql_database.test-db will be created
+  # module.data.yandex_mdb_mysql_database.test-db will be created
   + resource "yandex_mdb_mysql_database" "test-db" {
       + cluster_id = "c9q86jnjufktjgvf6eqv"
       + id         = (known after apply)
       + name       = "test"
     }
 
-  /# module.data.yandex_mdb_mysql_user.test-db-user will be created
+  # module.data.yandex_mdb_mysql_user.test-db-user will be created
   + resource "yandex_mdb_mysql_user" "test-db-user" {
       + authentication_plugin = (known after apply)
       + cluster_id            = "c9q86jnjufktjgvf6eqv"
@@ -158,3 +158,47 @@ Plan: 4 to add, 0 to change, 0 to destroy.
 
 Plan: 2 to add, 0 to change, 0 to destroy.
 </details>
+- Создание дополнительного хоста
+<details>
+<summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place
+  ~ resource "yandex_mdb_mysql_user" "test-db-user" {
+        id                 = "c9q86jnjufktjgvf6eqv:app"
+        name               = "app"
+        # (5 unchanged attributes hidden)
+
+      - permission {
+          - database_name = "test" -> null
+          - roles         = [
+              - "ALL",
+            ] -> null
+        }
+    }
+
+  # module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place
+  ~ resource "yandex_mdb_mysql_cluster" "test_cluster" {
+        id                        = "c9q86jnjufktjgvf6eqv"
+        name                      = "example"
+        # (15 unchanged attributes hidden)
+
+      + host {
+          + assign_public_ip = false
+          + name             = "example-replica-2"
+          + priority         = 10
+          + subnet_id        = "fl8og3qp2r2130or1c8l"
+          + zone             = "ru-central1-d"
+        }
+
+        # (7 unchanged blocks hidden)
+    }
+
+Plan: 0 to add, 2 to change, 0 to destroy.
+</details>  
+Скриншот консоли yandex:  
+<img src="/docs/images/Task10/Screen-56.png" alt="Скриншот terraform state" width="570" height="350">  
