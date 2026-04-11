@@ -29,31 +29,32 @@
 ## Задача 5.
 <details>
 <summary>План выполнения (нажмите, чтобы развернуть)</summary>
+```
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-  \+ create
+  + create
 
 Terraform will perform the following actions:
 
-  \# module.data.yandex_mdb_mysql_database.test-db will be created
-  \+ resource "yandex_mdb_mysql_database" "test-db" {
+  # module.data.yandex_mdb_mysql_database.test-db will be created
+  + resource "yandex_mdb_mysql_database" "test-db" {
       \+ cluster_id = (known after apply)
       \+ id         = (known after apply)
         name       = null
     }
 
-  \# module.data.yandex_mdb_mysql_user.test-db-user will be created
-  \+ resource "yandex_mdb_mysql_user" "test-db-user" {
-      \+ authentication_plugin = (known after apply)
-      \+ cluster_id            = (known after apply)
-      \+ connection_manager    = (known after apply)
-      \+ generate_password     = false
-      \+ id                    = (known after apply)
+  # module.data.yandex_mdb_mysql_user.test-db-user will be created
+  + resource "yandex_mdb_mysql_user" "test-db-user" {
+      + authentication_plugin = (known after apply)
+      + cluster_id            = (known after apply)
+      + connection_manager    = (known after apply)
+      + generate_password     = false
+      + id                    = (known after apply)
         name                  = null
 
-      \+ connection_limits (known after apply)
+      + connection_limits (known after apply)
     }
 
-  \# module.dev_net.yandex_vpc_network.dev_net will be created
+  # module.dev_net.yandex_vpc_network.dev_net will be created
   \+ resource "yandex_vpc_network" "dev_net" {
       \+ created_at                = (known after apply)
       \+ default_security_group_id = (known after apply)
@@ -141,4 +142,5 @@ Terraform will perform the following actions:
     }
 
 Plan: 6 to add, 0 to change, 0 to destroy.
+```
 </details>
