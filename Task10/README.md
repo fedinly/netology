@@ -202,5 +202,7 @@
   
   Plan: 0 to add, 2 to change, 0 to destroy.
   </details>  
+  
   Скриншот консоли yandex:  
+  
   <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот terraform state" width="570" height="350">  
