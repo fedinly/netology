@@ -9,7 +9,7 @@
 ## Задача 2.
 - Скриншот вывода terraform console  
   <img src="/docs/images/Task10/Screen-48.png" alt="Скриншот terraform console" width="270" height="150">  
-  [Ссылка на папку vms с кодом](https://github.com/fedinly/netology/tree/fddb42f60aaedd2d9714f143806f2990ab03f8ce/Task10/vms)
+  [Ссылка на папку vms с кодом](https://github.com/fedinly/netology/tree/0bca3718b74133ff37edff6c209464fc1080d7d3/Task10/vms)
 ## Задача 3.
 - terraform state list  
   <img src="/docs/images/Task10/Screen-49.png" alt="Скриншот terraform state" width="370" height="250">  
