@@ -23,8 +23,8 @@
 - [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7668e73ffad8c60b522141b60ffc304882ee779d/Task10/Ex4)  
   В соответствии с документацией к Terraform, разные модули не могут располагаться в одной директории, поэтому была создана папка modules, и в ней подпапки с модулями.  
   Также были исправлены зоны доступности, добавлена зона ru-central1-d вместо ru-central1-с. В этой зоне доступны платформы standard-v2, standard-v3, исправлено локально в модуле.  
-<img src="/docs/images/Task10/Screen-52.png" alt="Скриншот terraform state" width="570" height="350">
-<img src="/docs/images/Task10/Screen-53.png" alt="Скриншот terraform state" width="470" height="350">
+<img src="/docs/images/Task10/Screen-52.png" alt="Скриншот yc" width="570" height="350">
+<img src="/docs/images/Task10/Screen-53.png" alt="Скриншот yc" width="470" height="350">
 
 ## Задача 5.
 - [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/14fb32150e1b462f2e63aff570aa98acaa984033/Task10/Ex5)  
@@ -127,8 +127,8 @@
   </details>  
   
   Скриншоты консоли yandex:  
-  <img src="/docs/images/Task10/Screen-54.png" alt="Скриншот terraform state" width="570" height="570">  
-  <img src="/docs/images/Task10/Screen-55.png" alt="Скриншот terraform state" width="570" height="350">
+  <img src="/docs/images/Task10/Screen-54.png" alt="Скриншот yc" width="570" height="570">  
+  <img src="/docs/images/Task10/Screen-55.png" alt="Скриншот yc" width="570" height="350">
 - Создание БД и пользователя  
   <details>
   <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
@@ -205,4 +205,7 @@
   
   Скриншот консоли yandex:  
   
-  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот terraform state" width="570" height="350">  
+  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот yc" width="570" height="350">  
+## Задача 6.
+- Бакет создан
+  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот yc" width="570" height="350">
