@@ -208,4 +208,4 @@
   <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот yc" width="570" height="350">  
 ## Задача 6.
 - Бакет создан
-  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот yc" width="570" height="350">
+  <img src="/docs/images/Task10/Screen-57.png" alt="Скриншот yc" width="570" height="350">
