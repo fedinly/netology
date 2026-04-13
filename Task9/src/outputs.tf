@@ -1,22 +1,4 @@
-/*variable "vms" {
-  description = "vms"
 
-  type = map(list(object(
-    {
-      name = string,
-      id   = string,
-      fqdn = string
-    }))
-  )
-  default = {
-    "web" = [ {
-      name = "1"
-      id = "fdfsf"
-      fqdn = "fdefsdf"
-    } ],
-  }
-}
-*/
 locals  {
   vm1 = {vms = [for i in yandex_compute_instance.web : {
     id   = i .id,
@@ -43,5 +25,5 @@ locals  {
   }  
 }
 output "test" {
-  value = [for k,v in local.deep_merged : v]
+  value = [for k,v in local.deep_merged.vms : v]
 }
