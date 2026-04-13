@@ -209,3 +209,6 @@
 ## Задача 6.
 - Бакет создан
   <img src="/docs/images/Task10/Screen-57.png" alt="Скриншот yc" width="570" height="350">
+## Задача 7.
+- Вывод output:
+  <img src="/docs/images/Task10/Screen-58.png" alt="Скриншот yc" width="370" height="150">
