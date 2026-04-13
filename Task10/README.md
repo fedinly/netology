@@ -212,3 +212,7 @@
 ## Задача 7.
 - Вывод output:
   <img src="/docs/images/Task10/Screen-58.png" alt="Скриншот yc" width="370" height="150">
+- Скриншот vault:
+  <img src="/docs/images/Task10/Screen-59.png" alt="Скриншот yc" width="470" height="250">  
+  [Ссылка на папку с кодом]((https://github.com/fedinly/netology/tree/2b580944cb6c1e59a4a8c62cf3235e833e074523/Task10/Ex7)  
+  
