@@ -216,4 +216,4 @@
   <img src="/docs/images/Task10/Screen-59.png" alt="Скриншот yc" width="470" height="250">  
   [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/2b580944cb6c1e59a4a8c62cf3235e833e074523/Task10/Ex7)
 ## Задача 8.
-- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/807be4a974ebac6265802157e092a7482c439444/Task10/Ex8)
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7f55cf3666e56e6bc4603785456ee625f29f3cf2/Task10/Ex8)
