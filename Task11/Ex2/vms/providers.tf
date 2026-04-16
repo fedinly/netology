@@ -2,18 +2,19 @@ terraform {
   required_providers {
     yandex = {
       source = "yandex-cloud/yandex"
+      #version = "0.158.0"
     }
   }
   required_version = ">=1.12.0"
   
   backend "s3" {
     shared_credentials_files = [ "~/.aws/credentials" ]
-    profile = "default"
-    bucket  = "fedinly-netology-tfstate"
-    key     = "terraform.tfstate"
+    profile = "default"    
     region  = "ru-central1"
     
-
+    bucket  = "fedinly-netology-tfstate"
+    key     = "test/terraform.tfstate"
+    encrypt = false
     
     # Встроенный механизм блокировок (Terraform >= 1.6)
     # Не требует отдельной базы данных!
@@ -21,12 +22,15 @@ terraform {
     
     endpoints = {
       s3 = "https://storage.yandexcloud.net"
+      #dynamodb = "https://docapi.serverless.yandexcloud.net/ru-central1/etnts0te4jp2tnfp9hfj"
     }
     
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_requesting_account_id  = true
     skip_s3_checksum            = true
+
+    #dynamodb_table = "fedinly-netology-tfstate-lock"
   }
 }
 
