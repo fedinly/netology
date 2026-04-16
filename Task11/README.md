@@ -6,7 +6,10 @@
 ## Задание 2.
 - Сначала проект был инициализирован, затем прописана настройка `backend "s3"`. Скриншот вывода terraform init:  
   <img src="/docs/images/Task11/Screen-60.png" alt="Скриншот init" width="470" height="350">  
-- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/67f92cba0dba7040e9442613b4a8de918cc71fa4/Task11/Ex2)
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/67f92cba0dba7040e9442613b4a8de918cc71fa4/Task11/Ex2)  
   Реализовать появление ошибки блокировки не удалось. В каталоге, указанном в настройке для бакета, файл появляется,  
   <img src="/docs/images/Task11/Screen-62.png" alt="Скриншот init" width="370" height="250">  
-  затем после отработки terraform apply исчезает.
+  затем после отработки terraform apply исчезает. При этом запущена terraform console в соседнем терминале.  
+  В проекте два модуля, один ссылается на tfstate другого. Настройка бакета и запуск console происходит в модуле vms, который ссылается на модуль vpc.
+## Задание 3.  
+- 
