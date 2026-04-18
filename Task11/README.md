@@ -14,7 +14,7 @@
 ## Задание 3.  
 - [Ссылка на PR](https://github.com/fedinly/netology/pull/1#issue-4276909288)
 ## Задание 4.  
-- Код назначения проверки одного ip-адреса:
+- Код для проверки одного ip-адреса:
   ```
   variable "test_ip" {
   type = string
@@ -29,20 +29,53 @@
   При этом IP-адрес при использовании функции `cidrhost()` ip-адрес должен быть записан в cidr-нотации.
   При попытке проверить ip 192.1680.50.2 ошибка  
   <img src="/docs/images/Task11/Screen-64.png" alt="Скриншот terraform consolw" width="470" height="350">  
-- Код назначения проверки списка ip-адресов:
+- Код для проверки списка ip-адресов:
   ```
   variable "test_ip_list" {
-  type = list(string)
-  description = "some ip addresses"
-  default = [ "192.168.0.1/24", "1.1.1.1/8", "127.0.0.1/24"  ]
-    validation {
-      condition = alltrue([
-        for ip in var.test_ip_list : can(cidrhost(ip,1))
+    type = list(string)
+    description = "some ip addresses"
+    default = [ "192.168.0.1/24", "1.1.1.1/8", "127.0.0.1/24"  ]
+      validation {
+        condition = alltrue([
+          for ip in var.test_ip_list : can(cidrhost(ip,1))
         
-      ])
-      error_message = "Check input, mistake in address"
-    }
+        ])
+        error_message = "Check input, mistake in address"
+     }
   }
   ```  
   При попытке проверить неправильный ip-адрес консоль запускается с аналогичной ошибкой.
 ## Задание 5.  
+- Код для проверки строки, чтобы не содержала заглавных символов:
+  ```
+  variable "test_upper" {
+    type = string
+    description = "no uppers"
+    default = "fdggFkdfgbmbmidfdf"
+      validation {
+        condition =  can(regex("^[a-z]+$", var.test_upper))
+        error_message = "It is not an ip address"
+      }
+  }
+  ```
+  При аоявлении заглавной буквы ошибка та же, `Invalid value for variable`.
+- Код для проверки, что одно из значений равно true, а второе false:
+  ```
+  variable "in_the_end_there_can_be_only_one" {
+    description="Who is better Connor or Duncan?"
+    type = object({
+        Dunkan = optional(bool)
+        Connor = optional(bool)
+    })
+
+    default = {
+        Dunkan = true
+        Connor = false
+    }
+
+    validation {
+        error_message = "There can be only one MacLeod"
+        condition = <проверка>
+    }
+  }  
+  ```
