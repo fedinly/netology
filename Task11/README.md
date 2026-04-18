@@ -58,7 +58,7 @@
       }
   }
   ```
-  При аоявлении заглавной буквы ошибка та же, `Invalid value for variable`.
+  При появлении заглавной буквы ошибка та же, `Invalid value for variable`.
 - Код для проверки, что одно из значений равно true, а второе false:
   ```
   variable "in_the_end_there_can_be_only_one" {
@@ -69,13 +69,14 @@
     })
 
     default = {
-        Dunkan = true
+        Dunkan = false
         Connor = false
     }
 
     validation {
         error_message = "There can be only one MacLeod"
-        condition = <проверка>
+        condition = length(distinct(values(var.in_the_end_there_can_be_only_one))) == length(var.in_the_end_there_can_be_only_one)
     }
   }  
   ```
+  Результатом данной проверки в консоли также будет ошибка `Invalid value for variable`.
