@@ -14,3 +14,18 @@
 ## Задание 3.  
 - [Ссылка на PR](https://github.com/fedinly/netology/pull/1#issue-4276909288)
 ## Задание 4.  
+- Код назначения проверки одного ip-адреса:
+  ```
+  variable "test_ip" {
+  type = string
+  description = "ip address"
+  default = "192.168.50.0/24"
+    validation {
+      condition =  can(cidrhost(var.test_ip,2))
+      error_message = "It is not an ip address"
+  }
+  }
+  ```
+  При этом IP-адрес при использовании функции `cidrhost()` ip-адрес должен быть записан в cidr-нотации.
+  При попытке проверить ip 192.1680.50.2 ошибка
+  <img src="/docs/images/Task11/Screen-64.png" alt="Скриншот terraform consolw" width="470" height="350">  
