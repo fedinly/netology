@@ -27,5 +27,21 @@
   }
   ```
   При этом IP-адрес при использовании функции `cidrhost()` ip-адрес должен быть записан в cidr-нотации.
-  При попытке проверить ip 192.1680.50.2 ошибка
+  При попытке проверить ip 192.1680.50.2 ошибка  
   <img src="/docs/images/Task11/Screen-64.png" alt="Скриншот terraform consolw" width="470" height="350">  
+- Код назначения проверки списка ip-адресов:
+  ```
+  variable "test_ip_list" {
+  type = list(string)
+  description = "some ip addresses"
+  default = [ "192.168.0.1/24", "1.1.1.1/8", "127.0.0.1/24"  ]
+    validation {
+      condition = alltrue([
+        for ip in var.test_ip_list : can(cidrhost(ip,1))
+        
+      ])
+      error_message = "Check input, mistake in address"
+    }
+  }
+  ```  
+  При попытке проверить неправильный ip-ажрес консоль запускается с аналогичной ошибкой.
