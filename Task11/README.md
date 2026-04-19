@@ -83,7 +83,7 @@
 ## Задание 6.  
 Skipped.
 ## Задание 7.
-Не смог преодолеть ошибку при попытке переноса tfstate-файла модулей проекта vpc, vms:
+Не смог преодолеть ошибку при попытке переноса в бакет tfstate-файла модулей проекта vpc, vms:
 ```
  on providers.tf line 12, in terraform:
  │   12:     secret_key = data.terraform_remote_state.bucket.output.private_key_out
