@@ -93,3 +93,4 @@ Skipped.
 ```
 - На вновь созданный system account не назначилась роль storage.admin, ошибка `Error updating IAM policy for folder _id_: error updating access bindings of yandex_resourcemanager_folder_iam_member _id_: rpc error: code = PermissionDenied desc = Permission denied`, поэтому убран процесс создания аккаунта;
 - Изначально s3-бакет для переноса tfstate-файла модуля bucket закомментирован, файл переносится после создания самого бакета в yandex (повторный init).
+- Для переноса tfstate-файла в бакет необходимо включить бэкенд s3 в файле providers.tf, для инициализации использовать команду `terraform init -backend-config=./backend.hcl`
