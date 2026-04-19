@@ -1,0 +1,219 @@
+# Решение Домашнего задания к занятию «Продвинутые методы работы с Terraform»
+## Задача 1.
+- Скриншот консоли ВМ  
+  <img src="/docs/images/Task10/Screen-45.png" alt="Скриншот консоли ВМ" width="470" height="300">  
+- Скриншот свойств ВМ  
+  <img src="/docs/images/Task10/Screen-46.png" alt="Скриншот свойств ВМ" width="470" height="370">  
+- Скриншот вывода terraform console  
+  <img src="/docs/images/Task10/Screen-47.png" alt="Скриншот terraform console" width="470" height="300">
+## Задача 2.
+- Скриншот вывода terraform console  
+  <img src="/docs/images/Task10/Screen-48.png" alt="Скриншот terraform console" width="270" height="150">  
+  [Ссылка на папку vms с кодом](https://github.com/fedinly/netology/tree/0bca3718b74133ff37edff6c209464fc1080d7d3/Task10/vms)
+## Задача 3.
+- terraform state list  
+  <img src="/docs/images/Task10/Screen-49.png" alt="Скриншот terraform state" width="370" height="250">  
+- Команды  
+  `terraform state rm module.vpc_dev_net`;  
+  убрана секция module;  
+ `terraform import 'module.vpc_dev_net.yandex_vpc_network.vpc_dev_net' _id_`;  
+ `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`;  
+ `terraform import 'module.vpc_dev_net.yandex_vpc_subnet.vpc_dev_subn_a' _id_`  
+## Задача 4.
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7668e73ffad8c60b522141b60ffc304882ee779d/Task10/Ex4)  
+  В соответствии с документацией к Terraform, разные модули не могут располагаться в одной директории, поэтому была создана папка modules, и в ней подпапки с модулями.  
+  Также были исправлены зоны доступности, добавлена зона ru-central1-d вместо ru-central1-с. В этой зоне доступны платформы standard-v2, standard-v3, исправлено локально в модуле.  
+<img src="/docs/images/Task10/Screen-52.png" alt="Скриншот yc" width="570" height="350">
+<img src="/docs/images/Task10/Screen-53.png" alt="Скриншот yc" width="470" height="350">
+
+## Задача 5.
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/14fb32150e1b462f2e63aff570aa98acaa984033/Task10/Ex5)  
+  <details>
+  <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+    
+  Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:  
+    \+ create  
+  
+  Terraform will perform the following actions:
+  
+    \# module.dev_net.yandex_vpc_network.dev_net will be created  
+    \+ resource "yandex_vpc_network" "dev_net" {  
+        \+ created_at                = (known after apply)  
+        \+ default_security_group_id = (known after apply)  
+        \+ folder_id                 = (known after apply)  
+        \+ id                        = (known after apply)  
+        \+ labels                    = (known after apply)  
+        \+ name                      = "c-net"  
+        + subnet_ids                = (known after apply)
+      }
+  
+    \# module.dev_net.yandex_vpc_subnet.dev_subn_a will be created
+    \+ resource "yandex_vpc_subnet" "dev_subn_a" {  
+        \+ created_at     = (known after apply)  
+        \+ folder_id      = (known after apply)  
+        \+ id             = (known after apply)  
+        \+ labels         = (known after apply)  
+        \+ name           = "c-net-ru-central1-a"  
+        \+ network_id     = (known after apply)  
+        \+ v4_cidr_blocks = [  
+            \+ "10.0.1.0/24",  
+          ]  
+        \+ v6_cidr_blocks = (known after apply)  
+        \+ zone           = "ru-central1-a"  
+      }
+  
+    \# module.dev_net.yandex_vpc_subnet.dev_subn_d will be created  
+    \+ resource "yandex_vpc_subnet" "dev_subn_d" {  
+        \+ created_at     = (known after apply)  
+        \+ folder_id      = (known after apply)  
+        \+ id             = (known after apply)
+        \+ labels         = (known after apply)
+        \+ name           = "c-net-ru-central1-d"
+        \+ network_id     = (known after apply)
+        \+ v4_cidr_blocks = [
+            \+ "10.0.3.0/24",
+          ]
+        \+ v6_cidr_blocks = (known after apply)
+        \+ zone           = "ru-central1-d"
+      }
+  
+    \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be created
+    \+ resource "yandex_mdb_mysql_cluster" "test_cluster" {
+        \+ allow_regeneration_host   = false
+        \+ backup_retain_period_days = (known after apply)
+        \+ created_at                = (known after apply)
+        \+ deletion_protection       = (known after apply)
+        \+ description               = "MySQL Test Cluster"
+        \+ disk_encryption_key_id    = (known after apply)
+        \+ environment               = "PRESTABLE"
+        \+ folder_id                 = (known after apply)
+        \+ health                    = (known after apply)
+        \+ host_group_ids            = (known after apply)
+        \+ id                        = (known after apply)
+        \+ mysql_config              = (known after apply)
+        \+\ name                      = "example"
+        \+ network_id                = (known after apply)
+        \+ status                    = (known after apply)
+        \+ version                   = "8.0"
+        
+        + access (known after apply)
+  
+        + backup_window_start (known after apply)
+  
+        + disk_size_autoscaling (known after apply)
+  
+        + host {
+            + assign_public_ip   = false
+            + fqdn               = (known after apply)
+            + name               = "example-replica-1"
+            + priority           = 0
+            + replication_source = (known after apply)
+            + subnet_id          = (known after apply)
+            + zone               = "ru-central1-a"
+          }
+  
+        + maintenance_window (known after apply)
+  
+        + performance_diagnostics (known after apply)
+  
+        + resources {
+            + disk_size          = 16
+            + disk_type_id       = "network-ssd"
+            + resource_preset_id = "s2.micro"
+          }
+      }
+  
+  Plan: 4 to add, 0 to change, 0 to destroy.
+  </details>  
+  
+  Скриншоты консоли yandex:  
+  <img src="/docs/images/Task10/Screen-54.png" alt="Скриншот yc" width="570" height="570">  
+  <img src="/docs/images/Task10/Screen-55.png" alt="Скриншот yc" width="570" height="350">
+- Создание БД и пользователя  
+  <details>
+  <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+    
+    Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+      + create
+    
+    Terraform will perform the following actions:
+  
+    \# module.data.yandex_mdb_mysql_database.test-db will be created  
+    + resource "yandex_mdb_mysql_database" "test-db" {
+        + cluster_id = "c9q86jnjufktjgvf6eqv"
+        + id         = (known after apply)
+        + name       = "test"
+      }
+  
+    \# module.data.yandex_mdb_mysql_user.test-db-user will be created  
+    + resource "yandex_mdb_mysql_user" "test-db-user" {
+        + authentication_plugin = (known after apply)
+        + cluster_id            = "c9q86jnjufktjgvf6eqv"
+        + connection_manager    = (known after apply)
+        + generate_password     = false
+        + id                    = (known after apply)
+        + name                  = "app"
+        + password              = (sensitive value)
+  
+        + connection_limits (known after apply)
+      }
+  
+  Plan: 2 to add, 0 to change, 0 to destroy.
+  </details>
+- Создание дополнительного хоста
+  <details>
+  <summary>План выполнения (нажмите, чтобы развернуть)</summary>  
+  
+  Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+    ~ update in-place
+  
+  Terraform will perform the following actions:
+  
+    \# module.data.yandex_mdb_mysql_user.test-db-user will be updated in-place  
+    ~ resource "yandex_mdb_mysql_user" "test-db-user" {
+          id                 = "c9q86jnjufktjgvf6eqv:app"
+          name               = "app"
+          # (5 unchanged attributes hidden)
+  
+        - permission {
+            - database_name = "test" -> null
+            - roles         = [
+                - "ALL",
+              ] -> null
+          }
+      }
+  
+    \# module.test_cluster.yandex_mdb_mysql_cluster.test_cluster will be updated in-place  
+    ~ resource "yandex_mdb_mysql_cluster" "test_cluster" {
+          id                        = "c9q86jnjufktjgvf6eqv"
+          name                      = "example"
+          # (15 unchanged attributes hidden)
+  
+        + host {
+            + assign_public_ip = false
+            + name             = "example-replica-2"
+            + priority         = 10
+            + subnet_id        = "fl8og3qp2r2130or1c8l"
+            + zone             = "ru-central1-d"
+          }
+  
+          # (7 unchanged blocks hidden)
+      }
+  
+  Plan: 0 to add, 2 to change, 0 to destroy.
+  </details>  
+  
+  Скриншот консоли yandex:  
+  
+  <img src="/docs/images/Task10/Screen-56.png" alt="Скриншот yc" width="570" height="350">  
+## Задача 6.
+- Бакет создан
+  <img src="/docs/images/Task10/Screen-57.png" alt="Скриншот yc" width="570" height="350">
+## Задача 7.
+- Вывод output:
+  <img src="/docs/images/Task10/Screen-58.png" alt="Скриншот yc" width="370" height="150">
+- Скриншот vault:
+  <img src="/docs/images/Task10/Screen-59.png" alt="Скриншот yc" width="470" height="250">  
+  [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/2b580944cb6c1e59a4a8c62cf3235e833e074523/Task10/Ex7)
+## Задача 8.
+- [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/7f55cf3666e56e6bc4603785456ee625f29f3cf2/Task10/Ex8)

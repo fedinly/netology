@@ -1,0 +1,19 @@
+output "network_name" {
+  value = yandex_vpc_network.vpc_dev_net.name
+  description = "Network name to use in vm module"
+}
+
+output "network_id" {
+  value = yandex_vpc_network.vpc_dev_net.id
+  description = "Network ID, for using in vm module"
+}
+
+output "subn_a_id" {
+  value = yandex_vpc_subnet.vpc_dev_subn_a.id
+  description = "Subnet to Marketing VM's"
+}
+
+output "subn_b_id" {
+  value = yandex_vpc_subnet.vpc_dev_subn_b.id
+  description = "Subnet to Analytics VM's"
+}
