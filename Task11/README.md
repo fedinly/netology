@@ -12,4 +12,82 @@
   затем после отработки terraform apply исчезает. При этом запущена terraform console в соседнем терминале.  
   В проекте два модуля, один ссылается на tfstate другого. Настройка бакета и запуск console происходит в модуле vms, который ссылается на модуль vpc.
 ## Задание 3.  
-- 
+- [Ссылка на PR](https://github.com/fedinly/netology/pull/1#issue-4276909288)
+## Задание 4.  
+- Код для проверки одного ip-адреса:
+  ```
+  variable "test_ip" {
+  type = string
+  description = "ip address"
+  default = "192.168.50.0/24"
+    validation {
+      condition =  can(cidrhost(var.test_ip,2))
+      error_message = "It is not an ip address"
+  }
+  }
+  ```
+  При этом IP-адрес при использовании функции `cidrhost()` ip-адрес должен быть записан в cidr-нотации.
+  При попытке проверить ip 192.1680.50.2 ошибка  
+  <img src="/docs/images/Task11/Screen-64.png" alt="Скриншот terraform consolw" width="470" height="350">  
+- Код для проверки списка ip-адресов:
+  ```
+  variable "test_ip_list" {
+    type = list(string)
+    description = "some ip addresses"
+    default = [ "192.168.0.1/24", "1.1.1.1/8", "127.0.0.1/24"  ]
+      validation {
+        condition = alltrue([
+          for ip in var.test_ip_list : can(cidrhost(ip,1))
+        
+        ])
+        error_message = "Check input, mistake in address"
+     }
+  }
+  ```  
+  При попытке проверить неправильный ip-адрес консоль запускается с аналогичной ошибкой.
+## Задание 5.  
+- Код для проверки строки, чтобы не содержала заглавных символов:
+  ```
+  variable "test_upper" {
+    type = string
+    description = "no uppers"
+    default = "fdggFkdfgbmbmidfdf"
+      validation {
+        condition =  can(regex("^[a-z]+$", var.test_upper))
+        error_message = "It is not an ip address"
+      }
+  }
+  ```
+  При появлении заглавной буквы ошибка та же, `Invalid value for variable`.
+- Код для проверки, что одно из значений равно true, а второе false:
+  ```
+  variable "in_the_end_there_can_be_only_one" {
+    description="Who is better Connor or Duncan?"
+    type = object({
+        Dunkan = optional(bool)
+        Connor = optional(bool)
+    })
+
+    default = {
+        Dunkan = false
+        Connor = false
+    }
+
+    validation {
+        error_message = "There can be only one MacLeod"
+        condition = length(distinct(values(var.in_the_end_there_can_be_only_one))) == length(var.in_the_end_there_can_be_only_one)
+    }
+  }  
+  ```
+  Результатом данной проверки в консоли также будет ошибка `Invalid value for variable`.
+## Задание 6.  
+Skipped.
+## Задание 7.
+Не смог преодолеть ошибку при попытке переноса в бакет tfstate-файла модулей проекта vpc, vms:
+```
+ on providers.tf line 12, in terraform:
+ │   12:     secret_key = data.terraform_remote_state.bucket.output.private_key_out
+ │ 
+ │ Variables may not be used here.
+```
+Бакет отдельным модулем создался.
