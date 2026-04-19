@@ -80,3 +80,14 @@
   }  
   ```
   Результатом данной проверки в консоли также будет ошибка `Invalid value for variable`.
+## Задание 6.  
+Scipped
+## Задание 7.
+Не смог преодолеть ошибку при попытке переноса tfstate модулей проекта vpc, vms:
+```
+ on providers.tf line 12, in terraform:
+ │   12:     secret_key = data.terraform_remote_state.bucket.output.private_key_out
+ │ 
+ │ Variables may not be used here.
+```
+Бакет отдельным модулем создался.
