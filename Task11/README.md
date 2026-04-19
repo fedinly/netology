@@ -83,11 +83,13 @@
 ## Задание 6.  
 Skipped.
 ## Задание 7.
-Не смог преодолеть ошибку при попытке переноса в бакет tfstate-файла модулей проекта vpc, vms:
+Задача решена с ограничениями:  
+- Необходимо создание конфигурационного файла backend.hcl и его наполнение, т.к. при попытке переноса в бакет tfstate-файла модулей проекта vpc, vms получаем ошибку :
 ```
  on providers.tf line 12, in terraform:
  │   12:     secret_key = data.terraform_remote_state.bucket.output.private_key_out
  │ 
  │ Variables may not be used here.
 ```
-Бакет отдельным модулем создался.
+- На вновь созданный system account не назначилась роль storage.admin, ошибка `Error updating IAM policy for folder _id_: error updating access bindings of yandex_resourcemanager_folder_iam_member _id_: rpc error: code = PermissionDenied desc = Permission denied`, поэтому убран процесс создания аккаунта;
+- Изначально s3-бакет для переноса tfstate-файла модуля bucket закомментирован, файл переносится после создания самого бакета в yandex (повторный init).
