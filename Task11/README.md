@@ -83,7 +83,8 @@
 ## Задание 6.  
 Skipped.
 ## Задание 7.
-Задача решена с ограничениями:  
+[Ссылка на каталог с кодом](https://github.com/fedinly/netology/tree/c391d4a1d5d4093457f9d5a0ebe1ee4bfac7809d/Task11/Ex7)
+Задача не решена, проделал работу, столкнулся со сложностями:  
 - Необходимо создание конфигурационного файла backend.hcl и его наполнение, т.к. при попытке переноса в бакет tfstate-файла модулей проекта vpc, vms получаем ошибку :
 ```
  on providers.tf line 12, in terraform:
@@ -93,4 +94,5 @@ Skipped.
 ```
 - На вновь созданный system account не назначилась роль storage.admin, ошибка `Error updating IAM policy for folder _id_: error updating access bindings of yandex_resourcemanager_folder_iam_member _id_: rpc error: code = PermissionDenied desc = Permission denied`, поэтому убран процесс создания аккаунта;
 - Изначально s3-бакет для переноса tfstate-файла модуля bucket закомментирован, файл переносится после создания самого бакета в yandex (повторный init).
-- Для переноса tfstate-файла в бакет необходимо включить бэкенд s3 в файле providers.tf, для инициализации использовать команду `terraform init -backend-config=./backend.hcl`
+- Для переноса в модуле bucket в бакет s3 tfstate-файла необходимо включить настройку backend s3 в файле providers.tf, для инициализации использовать команду `terraform init -backend-config=./backend.hcl`;
+- При попытке чтения информации из remote state в модулях vpc, vms столкнулся с ошибкой `Invalid AWS Region: ru-central1`, хотя в файле ~/.aws/config регион прописан.
