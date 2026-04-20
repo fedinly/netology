@@ -26,3 +26,4 @@ ok: [ubuntu] => {
 }
 ```
 ## Осн.часть №7.
+<img src="/docs/images/Task12/Screen-65.png" alt="Скриншот encrypt" width="470" height="350">  
