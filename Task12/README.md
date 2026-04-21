@@ -55,3 +55,8 @@ ok: [ubuntu] => {
 
 ## Осн.часть №12-13.
 [Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/28749f0c5bba271f26faddcef73ae9ce17e03ff7/Task12/playbook)
+## Необяз.часть №1
+- Командой `find group_vars/ -type f -name "*.yml" -exec ansible-vault decrypt {} +` расшифруются все зашифрованные файлы в каталоге group_vars\
+## Необяз.часть №2
+- Скрин зашифрованной части файла:  
+<img src="/docs/images/Task12/Screen-63.png" alt="Скриншот encrypt" width="370" height="200">  
