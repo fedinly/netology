@@ -37,18 +37,18 @@ ok: [ubuntu] => {
   <summary>prod.yml (нажмите, чтобы развернуть)</summary>  
 
   ---
-  el:
-    hosts:
-      centos7:
-        ansible_connection: docker
-  deb:
-    hosts:
-      ubuntu:
-        ansible_connection: docker
-  local:
-    hosts:
-      localhost:
-        ansible_connection: local
+  el:  
+    hosts:  
+      centos7:  
+        ansible_connection: docker  
+  deb:  
+    hosts:  
+      ubuntu:  
+        ansible_connection: docker  
+  local:  
+    hosts:  
+      localhost:  
+        ansible_connection: local  
 
 </details>  
 Факты some_fact для каждого из хостов определяются из group_vars - all.
