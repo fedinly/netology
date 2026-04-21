@@ -59,7 +59,8 @@ ok: [ubuntu] => {
 - Командой `find group_vars/ -type f -name "*.yml" -exec ansible-vault decrypt {} +` расшифруются все зашифрованные файлы в каталоге group_vars\
 ## Необяз.часть №2.
 - Скрин зашифрованной части файла:  
-<img src="/docs/images/Task12/Screen-63.png" alt="Скриншот encrypt" width="370" height="200">  
+<img src="/docs/images/Task12/Screen-63.png" alt="Скриншот encrypt" width="370" height="200">
+
 ## Необяз.часть №3.
 - Для группы хостов all из файла плейбука site.yml (параметр hosts: all) применяется плей Print fact, в нем настраивается данная переменная, которую назвал `"{{ some_fact2 }}"`.  
 <img src="/docs/images/Task12/Screen-66.png" alt="Скриншот результата" width="370" height="200">  
