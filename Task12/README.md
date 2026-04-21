@@ -29,4 +29,24 @@ ok: [ubuntu] => {
 <img src="/docs/images/Task12/Screen-65.png" alt="Скриншот encrypt" width="470" height="350">  
 
 ## Осн.часть №8.
-- Работает с ключом `--ask-vault-pass`.
+- Работает с ключом `--ask-vault-pass`. 
+## Осн.часть №9.
+- Для работы на control node дополнительные плагины не нужны.
+## Осн.часть №10-11.
+<details>
+  <summary>prod.yml (нажмите, чтобы развернуть)</summary>  
+---
+  el:
+    hosts:
+      centos7:
+        ansible_connection: docker
+  deb:
+    hosts:
+      ubuntu:
+        ansible_connection: docker
+  local:
+    hosts:
+      localhost:
+        ansible_connection: local
+</details>  
+Факты some_fact для каждого из хостов определяются из group_vars - all.
