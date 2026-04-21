@@ -51,4 +51,5 @@ ok: [ubuntu] => {
         ansible_connection: local  
 
 </details>  
-Факты some_fact для каждого из хостов определяются из group_vars - all.
+Факты some_fact для каждого из хостов определяются из group_vars - all.  
+[Ссылка на папку с кодом](https://github.com/fedinly/netology/tree/28749f0c5bba271f26faddcef73ae9ce17e03ff7/Task12/playbook)
