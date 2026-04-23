@@ -1,1 +1,14 @@
+data_dir: {{ vector_data_dir }}
 
+sources:
+    {{ vector_source_name }}:
+        type: {{vector_source_type}}
+        include:
+            - {{ vector_log_path}}
+
+sinks:
+    {{ vector_sink_name}}:
+        type: {{ vector_sink_type}}
+        inputs: 
+            - {{ vector_source_name}}
+        address: {{ vector_sink_address}}
