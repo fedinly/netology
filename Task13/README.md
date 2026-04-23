@@ -10,6 +10,9 @@
 ## Осн.часть №5.
   - В файле requirements.yml закомментированы строки, отномящиеся к roles, поэтому в lint оошибки. На запуск play не влияют.
   <img src="/docs/images/Task13/Screen-69.png" alt="Скриншот vector" width="570" height="300">
+
 ## Осн.часть №6.
-Запуск playbook на этом окружении с флагом --check.  
+ - Запуск playbook на этом окружении с флагом --check.  
 <img src="/docs/images/Task13/Screen-70.png" alt="Скриншот с check" width="670" height="400">
+
+## Осн.часть №7.
