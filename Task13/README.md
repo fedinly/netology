@@ -15,4 +15,6 @@
  - Запуск playbook на этом окружении с флагом --check.  
 <img src="/docs/images/Task13/Screen-70.png" alt="Скриншот с check" width="670" height="400">
 
-## Осн.часть №7.
+## Осн.часть №7-8.
+ - Скриншоты идентичные, представлен один.  
+<img src="/docs/images/Task13/Screen-71.png" alt="Скриншот с diff" width="670" height="400">
