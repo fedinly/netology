@@ -17,4 +17,5 @@
 
 ## Осн.часть №7-8.
  - Скриншоты идентичные, представлен один.  
-<img src="/docs/images/Task13/Screen-71.png" alt="Скриншот с diff" width="670" height="400">
+<img src="/docs/images/Task13/Screen-71.png" alt="Скриншот с diff" width="670" height="400">  
+[Ссылка на каталог playbook](https://github.com/fedinly/netology/tree/a5ce42d2d5f91a2c5498fa077ea170141f370391/Task13/playbook)
