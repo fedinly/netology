@@ -8,6 +8,11 @@
   <img src="/docs/images/Task14/Screen-72.png" alt="Скриншот lighthouse" width="270" height="150">   
 
 ## Осн.часть 5.
-  - Скриншот выполнения ansibl-lint. Ошибки только в установке роли.
+  - Скриншот выполнения ansible-lint. Ошибки только в установке роли.
   <img src="/docs/images/Task14/Screen-74.png" alt="Скриншот результата ansible-lint" width="670" height="600">  
+
+## Осн.часть 6.
+  - Скриншот выполнения с ключом --check.
+  <img src="/docs/images/Task14/Screen-75.png" alt="Скриншот результата ansible-lint" width="670" height="600">  
+
 ---
