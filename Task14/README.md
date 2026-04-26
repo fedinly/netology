@@ -15,4 +15,9 @@
   - Скриншот выполнения с ключом --check.
   <img src="/docs/images/Task14/Screen-75.png" alt="Скриншот результата ansible-lint" width="670" height="600">  
 
+## Осн.часть 7-8.
+  - Скриншоты выполнения с ключом --diff.
+  <img src="/docs/images/Task14/Screen-76.png" alt="Скриншот результата ansible-lint" width="670" height="600">   
+  <img src="/docs/images/Task14/Screen-77.png" alt="Скриншот результата ansible-lint" width="670" height="600">   
+
 ---
