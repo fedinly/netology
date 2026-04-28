@@ -1,3 +1,0 @@
----
-# vars file for nginx-role
-nginx_user_name: centos
