@@ -12,4 +12,5 @@
   <img src="/docs/images/Task15/Screen-79.png" alt="Скриншот выполнения с roles 1" width="670" height="600">
     Скриншот ответа от сервера с установленным lighthouse.  
   <img src="/docs/images/Task15/Screen-80.png" alt="Скриншот lighthouse" width="270" height="160">
-
+  - Ссылки на репозитории и решение:  
+  [Репозиторий vector](https://github.com/fedinly/ansible-vector-role.git), [Репозиторий lighthouse](https://github.com/fedinly/ansible-lighthouse-role.git), [Ссылка на папку playbook]()
