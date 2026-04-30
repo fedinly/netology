@@ -8,9 +8,11 @@
   - Все roles выложены в репозитории. Проставлены теги 1.0.0. Добавлены roles в requirements.yml в playbook;  
   - playbook переработан на использование roles;  
   - Произведена проверка деплоя на инфраструктуру, развернутую на yc, скриншоты выполнения:  
-  <img src="/docs/images/Task15/Screen-78.png" alt="Скриншот выполнения с roles 1" width="570" height="400">  
-  <img src="/docs/images/Task15/Screen-79.png" alt="Скриншот выполнения с roles 1" width="670" height="600">
+    <img src="/docs/images/Task15/Screen-78.png" alt="Скриншот выполнения с roles" width="570" height="400">  
+    <img src="/docs/images/Task15/Screen-79.png" alt="Скриншот выполнения с roles 1" width="670" height="600">
     Скриншот ответа от сервера с установленным lighthouse.  
-  <img src="/docs/images/Task15/Screen-80.png" alt="Скриншот lighthouse" width="270" height="160">
+    <img src="/docs/images/Task15/Screen-80.png" alt="Скриншот lighthouse" width="270" height="160">  
+
   - Ссылки на репозитории и решение:  
-  [Репозиторий vector](https://github.com/fedinly/ansible-vector-role.git), [Репозиторий lighthouse](https://github.com/fedinly/ansible-lighthouse-role.git), [Ссылка на папку playbook]()
+  
+    [Репозиторий vector](https://github.com/fedinly/ansible-vector-role.git), [Репозиторий lighthouse](https://github.com/fedinly/ansible-lighthouse-role.git), [Ссылка на папку playbook](https://github.com/fedinly/netology/tree/b56e2ed0689daa347391eb29bdc86f5d956e211c/Task15/playbook  )
