@@ -1,8 +1,8 @@
-# - name: Install Clickhouse
-#   tags: clickhouse
-#   hosts: clickhouse
-#   roles:
-#     - clickhouse
+ - name: Install Clickhouse
+   tags: clickhouse
+   hosts: clickhouse
+   roles:
+    - clickhouse
 
 - name: Install vector
   tags: vector
