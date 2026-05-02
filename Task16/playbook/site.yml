@@ -1,0 +1,21 @@
+- hosts: all
+  become: true
+  become_method: sudo
+  roles:
+    - python
+    - vector-role
+    - ansible-role-docker
+  tasks:
+    - name: install pip3
+      ansible.builtin.apt:
+        package: python3-pip
+    - name: install molecule
+      ansible.builtin.pip:
+        name: molecule<6.0.0
+        executable: pip3
+        state: present
+    - name: install molecule-pl
+      ansible.builtin.pip:
+        name: molecule-plugins[docker]<23.0.0
+        executable: pip3
+        state: present
