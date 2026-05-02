@@ -6,7 +6,7 @@
   - name: lighthouse-role
     src: git@github.com:fedinly/ansible-lighthouse-role.git
     scm: git
-    version: "1.0.0"
+    version: "1.1.0"
   - name: vector-role
     src: git@github.com:fedinly/ansible-vector-role.git
     scm: git
