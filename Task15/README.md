@@ -15,4 +15,4 @@
 
   - Ссылки на репозитории и решение:  
   
-    [Репозиторий vector](https://github.com/fedinly/ansible-vector-role.git), [Репозиторий lighthouse](https://github.com/fedinly/ansible-lighthouse-role.git), [Ссылка на папку playbook](https://github.com/fedinly/netology/tree/b56e2ed0689daa347391eb29bdc86f5d956e211c/Task15/playbook  )
+    [Репозиторий vector](https://github.com/fedinly/ansible-vector-role.git), [Репозиторий lighthouse](https://github.com/fedinly/ansible-lighthouse-role.git), [Ссылка на папку playbook](https://github.com/fedinly/netology/tree/1bbf4c9423d9b8fa48ac3d3a940b499a29c92b15/Task15/playbook)
