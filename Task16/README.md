@@ -11,3 +11,5 @@
 
  - Скриншоты проверки после внесения asserts в verify.yml:  
  <img src="/docs/images/Task16/Screen-84.png" alt="Скриншот molecule test remote" width="570" height="570">  
+
+ - [Ссылка на репозиторий с версионированием](https://github.com/fedinly/ansible-vector-role/releases/tag/2.1.0)
