@@ -1,5 +1,5 @@
 # Решение Домашнего задания к занятию «Управляющие конструкции в коде Terraform»
-[Ссылка на репозиторий с кодом](https://github.com/fedinly/task9_2.git)  
+[Ссылка на репозиторий с кодом](https://github.com/fedinly/netology/tree/2324c37192c2e294789a9c5a5b7566f14b665682/Task9/src)  
 ## Задание 1.
 - Скриншот консоли YC
 <img src="Ex1/Screen-33.png" alt="Скриншот консоли YC" width="370" height="330">  
@@ -17,4 +17,45 @@
 
 ## Задание 4.
 - Скриншот ansible инвент-файла
- <img src="/docs/images/Task9/Screen-39.png" alt="Скриншот ansible инвент-файла" width="370" height="200"> 
+ <img src="/docs/images/Task9/Screen-39.png" alt="Скриншот ansible инвент-файла" width="370" height="200">  
+- Инвентарь для серверов из групп webservers, databases позволяет создать боле 2 ВМ, т.к. машины создаются циклически; для ВМ storage динамически создаются только доп.диски, ВМ в единственном экземпляре.  
+
+## Задание 5.
+- Файл outputs.tf представлен в репозитории. Данный output выводит общий список из требуемых словарей "ключ"="значение". Способ подсказан ИИ, объяснение по коду:
+  1) Создаем 3 локальные переменные (по видам ВМ), каждая - цикл по соответствующему инстансу, получаем словари;
+  2) Т.к. значение keys(local.vm"N") N=1..3 в кажом из 3-х случаев равно "vms", то значение выражения `distinct(concat(keys(local.vm1), keys(local.vm2), keys(local.vm3)))` равно `[ "vms" ]`; это значение подставится как ключ в итоговом словаре;
+  3) value для цикла for получается в результате объединения значений переменных local.vm"N", т.е. получаем список словарей.
+  4) В выводе output выделяется только values.  
+  <img src="/docs/images/Task9/Screen-41.png" alt="Скриншот output" width="390" height="390">
+    
+P.S. Спасибо за наводку по поводу merge.  
+
+## Задание 6.  
+## Задание 7.  
+## Задание 8.
+- Ошибка terrafdorm plan: `Invalid character; This character is not used within the language., and 1 other diagnostic(s).`  
+  Необходимо верно расставить закрывающие скобки `}`, т.е. нужно поставить вслед за строкой `"nat_ip_address"]` и убрать в конце строки. Также необходимо убрать пробел в строке `i["platform_id "]`.  
+  Скрин hosts.ini после вставки исправленного кода:  
+  <img src="/docs/images/Task9/Screen-40.png" alt="Скриншот hosts.ini" width="470" height="250">  
+## Задание 9.
+- Требуется в terraform console ввести выражение:
+  `join(",", concat([for i in range (1,10,1): "rc0${i}"],[for i in range (10,100,1): "rc${i}"]))`, получим список в ввиде строки:  
+   <img src="/docs/images/Task9/Screen-42.png" alt="Скриншот console 1" width="570" height="150">
+- Создан файл main.tf:
+  ```
+  locals {
+    from_list       = concat([for i in range(1,10,1) : "rc0${i}"],[for i in range(10,100,1) : "rc${i}"])
+    exclude         = concat([for j in range(6,97,10) : j], [for j in range(7,98,10) : j],
+                              [for j in range(28,99,10) : j], [for j in range(9,100,10) : j], [8])
+    exclude_strings = formatlist("%02d",local.exclude)
+    sorted_strings  = sort(local.exclude_strings)
+    sorted_exclude  = [for s in local.sorted_strings : tonumber(s)]
+    to_list         = [for k, val in local.from_list: val
+      if !contains(local.exclude, k)]
+  }
+  output "final" {
+    value = join(",", local.to_list)
+  }
+  ```
+  Получаем вывод в консоли
+  <img src="/docs/images/Task9/Screen-43.png" alt="Скриншот console 2" width="570" height="150">
