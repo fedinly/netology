@@ -8,3 +8,5 @@
   <img src="/docs/images/Task17/Screen-89.png" alt="Скриншот данных в репозитории" width="470" height="300">  
   - П. 13, успешное выполнение  
   <img src="/docs/images/Task17/Screen-90.png" alt="Скриншот выполнения шага" width="370" height="200">  
+  - П. 17, собранный артефакт  
+  <img src="/docs/images/Task17/Screen-91.png" alt="Скриншот выполнения шага" width="370" height="250">  
