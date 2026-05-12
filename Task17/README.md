@@ -10,3 +10,4 @@
   <img src="/docs/images/Task17/Screen-90.png" alt="Скриншот выполнения шага" width="370" height="200">  
   - П. 17, собранный артефакт  
   <img src="/docs/images/Task17/Screen-91.png" alt="Скриншот выполнения шага" width="370" height="250">  
+  - [Ссылка на репозиторий](https://github.com/fedinly/example-teamcity-2.git)
