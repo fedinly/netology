@@ -1,0 +1,21 @@
+---
+  # - name: clickhouse
+  #   src: git@github.com:AlexeySetevoi/ansible-clickhouse.git
+  #   scm: git
+  #   version: "1.13"
+  # - name: lighthouse-role
+  #   src: git@github.com:fedinly/ansible-lighthouse-role.git
+  #   scm: git
+  #   version: "1.1.0"
+  - name: vector-role
+    src: git@github.com:fedinly/ansible-vector-role.git
+    scm: git
+    version: "1.2.0"
+  - name: ansible-role-docker
+    src: https://github.com/geerlingguy/ansible-role-docker.git
+    scm: git
+    version: 8.0.0
+  - name: python
+    src: https://github.com/cisagov/ansible-role-python
+    scm: git
+    version: v3.0.0

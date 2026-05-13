@@ -1,0 +1,13 @@
+---
+vector_version: "0.41.0"
+vector_arch: x86_64
+vector_packages:
+  - vector
+vector_data_dir: /var/lib/vector
+vector_source_name: nginx_logs
+vector_source_type: file
+vector_log_path: /var/log/nginx/*.log
+vector_sink_name: clickhouse
+vector_sink_type: clickhouse
+vector_sink_address: 10.0.1.20
+vector_config_path: /etc/vector/vector

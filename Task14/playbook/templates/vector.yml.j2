@@ -1,0 +1,19 @@
+data_dir: {{ vector_data_dir }}
+
+sources:
+    {{ vector_source_name }}:
+        ignore_older_secs: 600
+        type: {{vector_source_type}}
+        read_from: beginning
+        include:
+            - {{ vector_log_path}}
+
+sinks:
+    {{ vector_sink_name}}:
+        type: {{ vector_sink_type}}
+        healthcheck: false
+        skip_unknown_fields: true
+        table: {{ vector_sink_table}}
+        inputs: 
+            - {{ vector_sink_name}}
+        address: {{ vector_sink_address}}
