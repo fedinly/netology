@@ -15,9 +15,9 @@
         Для Pull-систем упрощенная схема контроля за данными (+);  
         Для Pull-систем можно настроить единый proxy для сбора по TLS (+);      
   - П.6 Prometheus - pull-модель  
-        Zabbix - push&pull модели
-        TICK - push модель
-        Nagios - push&pull модели
+        Zabbix - push&pull модели  
+        TICK - push модель  
+        Nagios - push&pull модели  
         VictoriaMetrics - push&pull модели.
   - П.7  
   <img src="/docs/images/T19-Mon-02/Screen-94.png" alt="Скриншот страницы Chronograf" width="670" height="600">  
