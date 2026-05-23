@@ -23,3 +23,5 @@
   <img src="/docs/images/T19-Mon-02/Screen-94.png" alt="Скриншот страницы Chronograf" width="670" height="600">  
   - П.8  
   <img src="/docs/images/T19-Mon-02/Screen-95.png" alt="Скриншот графика утилизации CP" width="670" height="600">  
+  - П.9    
+  <img src="/docs/images/T19-Mon-02/Screen-96.png" alt="Скриншот вывода метрик docker" width="670" height="600">  
