@@ -19,4 +19,5 @@
         TICK - push модель
         Nagios - push&pull модели
         VictoriaMetrics - push&pull модели.
-  - П.7 
+  - П.7  
+  <img src="/docs/images/T19-Mon-02/Screen-94.png" alt="Скриншот страницы Chronograf" width="670" height="600">  
