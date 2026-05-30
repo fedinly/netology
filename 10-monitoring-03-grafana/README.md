@@ -5,9 +5,9 @@
  <img src="/docs/images/T20-Mon-03/Screen-97.png" alt="Скриншот Dashboard" width="570" height="500">
 Запросы в PromQL:
 
-1) `100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) (Код - честно - позаимствован у ИИ)
+ 1) `100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` (Код - честно - позаимствован у ИИ)
    
-Пояснения:  
+ Пояснения:  
 
 `node_cpu_seconds_total` - метрика, которая запрашивается и с которой выполняется дальнейшее преобразование;  
 
@@ -17,13 +17,18 @@
 
 `avg by (instance)` - вычисление среднего значения для инстанса;  
 
-вычитаем из 100%, чтобы получить загруженность CPU, а не простой.  
+ вычитаем из 100%, чтобы получить загруженность CPU, а не простой.  
 
-2) `(node_load15 / on(instance) group_left count(node_cpu_seconds_total{mode="idle"}) by (instance)) * 100`
+ 2) `(node_load15 / on(instance) group_left count(node_cpu_seconds_total{mode="idle"}) by (instance)) * 100`
 
-Пояснения:  
-Для мониторинга средней нагрузки системы (1/5/15 минут) с помощью exporter, используется node_load1, node_load5, и node_load15  
+ Пояснения:  
+ 
+ Для мониторинга средней нагрузки системы (1/5/15 минут) с помощью exporter, используется node_load1, node_load5, и node_load15  
 
-3) `node_memory_MemAvailable_bytes / 1024 /1024 /1024` - своб.память в Гб;
+ 3) `node_memory_MemAvailable_bytes / 1024 /1024 /1024` - своб.память в Гб;
    
-4) `node_filesystem_free_bytes / 1024 / 1024 / 1024`.
+ 4) `node_filesystem_free_bytes / 1024 / 1024 / 1024`.
+    
+- П.3. Скриншот уведомления из Telegram:
+
+<img src="/docs/images/T20-Mon-03/Screenshot_2026-05-31-00-40-35-073_org.telegram.messenger.jpg" alt="Скриншот Telegram" width="500" height="580">
