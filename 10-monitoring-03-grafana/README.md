@@ -31,4 +31,4 @@
     
 - П.3. Скриншот уведомления из Telegram:
 
-<img src="/docs/images/T20-Mon-03/Screenshot_2026-05-31-00-40-35-073_org.telegram.messenger.jpg" alt="Скриншот Telegram" width="500" height="580">
+<img src="/docs/images/T20-Mon-03/Screenshot_2026-05-31-00-40-35-073_org.telegram.messenger.jpg" alt="Скриншот Telegram" width="400" height="580">
