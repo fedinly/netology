@@ -49,6 +49,7 @@ services:
     volumes:
       - ./grafana:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
+      - ./grafana/custom.ini:/etc/grafana/grafana.ini
     
     hostname: grafana
     restart: unless-stopped
