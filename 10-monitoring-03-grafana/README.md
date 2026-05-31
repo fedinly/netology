@@ -31,4 +31,6 @@
     
 - П.3. Скриншот уведомления из Telegram, удалось добиться, чтобы подставлялась верная ссылка на Panel, скриншот не прикладывает:
 
-<img src="/docs/images/T20-Mon-03/Screen-98.png" alt="Скриншот Telegram" width="300" height="580">
+<img src="/docs/images/T20-Mon-03/Screen-98.png" alt="Скриншот Telegram" width="300" height="580">  
+
+- П.4. [Ссылка на JSON-файл с настройкаи](https://github.com/fedinly/netology/blob/b54cb602c435f91cdf518e588ca6d1cd58ff8321/10-monitoring-03-grafana/grafana_settngs.json)
