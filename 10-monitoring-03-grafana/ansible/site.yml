@@ -101,7 +101,14 @@
         dest: /srv/prometheus/configuration/prometheus.yml
         mode: '0644'
         owner: nobody
-        group: nogroup  
+        group: nogroup
+    - name: Copy grafana conf to server
+      ansible.builtin.template:
+        src:  custom.ini.j2
+        dest: /srv/grafana/custom.ini
+        mode: '0644'
+        owner: 472
+        group: 472  
     - name: Copy docker-compose.yml to server
       ansible.builtin.copy:
         src: ./compose.yml
@@ -115,4 +122,4 @@
         files:
           - compose.yml
         state: present
-      register: output
+      register: output  
