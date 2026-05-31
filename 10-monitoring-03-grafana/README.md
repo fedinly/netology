@@ -29,6 +29,6 @@
    
  4) `node_filesystem_free_bytes / 1024 / 1024 / 1024`.
     
-- П.3. Скриншот уведомления из Telegram:
+- П.3. Скриншот уведомления из Telegram, удалось добиться, чтобы подставлялась верная ссылка на Panel, скриншот не прикладывает:
 
 <img src="/docs/images/T20-Mon-03/Screen-98.png" alt="Скриншот Telegram" width="300" height="580">
