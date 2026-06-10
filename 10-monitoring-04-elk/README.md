@@ -3,10 +3,11 @@
  - Обновление: после изменения конфигов filebeat, logstash начали поступать данные с индексом logstash. Воспользовался содержимым папки help с незначительными изменениями конфига filebeat, файла compose.
    <img src="/docs/images/T21-Mon-04/Screen-101.png" alt="Скриншот Kibana new" width="570" height="500">
 
- - Настроены политики hot, warm путем ввода команды:
-   `curl -X PUT -H "Content-Type: application/json" -d '{"policy":{"_meta":{"description":"used for logstash","project":{"name":"myProject","department":"netology"}},"phases":{"warm":{"min_age":"1d","actions":{"forcemerge":{"max_num_segments":1}}},"delete":{"min_age":"3d","actions":{"delete":{}}}}}}' "$ES_URL/_ilm/policy/my_policy"`
+ - Настроены политики hot, warm путем ввода команды:  
+   `curl -X PUT -H "Content-Type: application/json" -d '{"policy":{"_meta":{"description":"used for logstash","project":{"name":"myProject","department":"netology"}},"phases":{"warm":{"min_age":"1d","actions":{"forcemerge":{"max_num_segments":1}}},"delete":{"min_age":"3d","actions":{"delete":{}}}}}}' "$ES_URL/_ilm/policy/my_policy"`  
    Ответ:  
    `{"acknowledged":true}`
+   Предварительно в файлах es-hot.yml, es-warm.yml прописана настройка `node.attr.box_type: hot` `(node.attr.box_type: warm)`
    
 ## Неактуально:   
  - На данный момент получены логи с помщью сборщика Filebeat через Logstash:  
