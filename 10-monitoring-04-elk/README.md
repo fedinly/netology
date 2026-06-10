@@ -12,7 +12,7 @@
  - Привязка политики к шаблону индекса:
    `curl -X PUT -H "Content-Type: application/json" -d '{"index_patterns": ["logstash-*"],"template": {"settings": {"index.lifecycle.name": "my_custom_policy","index.lifecycle.rollover_alias": "logstash-alias"}}}' "$ES_URL/_index_template/my_template"`  
    Ответ после ввода команды:    
-   `{"acknowledged":true}`
+   `{"acknowledged":true}`  
    Предварительно в файлах es-hot.yml, es-warm.yml прописана настройка `node.attr.box_type: hot` `(node.attr.box_type: warm)`
    
 ## Неактуально:   
