@@ -8,7 +8,11 @@
  - Настроены политики hot, warm путем ввода команды:  
    `curl -X PUT -H "Content-Type: application/json" -d '{"policy":{"_meta":{"description":"used for logstash","project":{"name":"myProject","department":"netology"}},"phases":{"warm":{"min_age":"1d","actions":{"forcemerge":{"max_num_segments":1}}},"delete":{"min_age":"3d","actions":{"delete":{}}}}}}' "$ES_URL/_ilm/policy/my_policy"`  
    Ответ после ввода команды:    
-   `{"acknowledged":true}`  
+   `{"acknowledged":true}`
+ - Привязка политики к шаблону индекса:
+   `curl -X PUT -H "Content-Type: application/json" -d '{"index_patterns": ["logstash-*"],"template": {"settings": {"index.lifecycle.name": "my_custom_policy","index.lifecycle.rollover_alias": "logstash-alias"}}}' "$ES_URL/_index_template/my_template"`  
+   Ответ после ввода команды:    
+   `{"acknowledged":true}`
    Предварительно в файлах es-hot.yml, es-warm.yml прописана настройка `node.attr.box_type: hot` `(node.attr.box_type: warm)`
    
 ## Неактуально:   
