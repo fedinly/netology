@@ -1,5 +1,9 @@
 # Решение домашнего задания к занятию 15 «Система сбора логов Elastic Stack»
 ## Задание 1.
+ - Обновление 2: с использованием каталога help. Запущено 6 контейнеров, в kibana поступают данные от some_app:
+   <img src="/docs/images/T21-Mon-04/Screen-103.png" alt="Скриншот Kibana new 2" width="570" height="500">  
+   <img src="/docs/images/T21-Mon-04/Screen-104.png" alt="Скриншот Running Containers" width="570" height="300">
+   
  - Обновление: после изменения конфигов filebeat, logstash начали поступать данные с индексом logstash. Воспользовался содержимым папки help с незначительными изменениями конфига filebeat, файла compose.
    <img src="/docs/images/T21-Mon-04/Screen-101.png" alt="Скриншот Kibana new" width="570" height="500">  
    Распределение по кол-ву логов от контейнеров в % :  
