@@ -45,6 +45,6 @@
   Выбор платформы за руководителем проекта.
 
 ## Задача 5. Мониторинг
-- По предложеному способу проверки мониторина Grafana прроизведено несолько POST-запросов в цикле, скриншот дашбsорда:  
+- По предложеному способу проверки мониторина Grafana прроизведено несолько POST-запросов в цикле, скриншот дашборда:  
   <img src="/docs/images/T24-Msvc-03/Screen-105.png" alt="Скриншот Grafana new 2" width="670" height="620">  
   [Ссылка на docker-compose.yml](https://github.com/fedinly/netology/blob/e5005025745e7cad6e9523bf801dacf234f4f4f2/11-microsvc-03-approaches/srv/docker-compose-mon.yml)
