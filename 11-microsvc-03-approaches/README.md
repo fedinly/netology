@@ -48,3 +48,4 @@
 - По предложеному способу проверки мониторина Grafana прроизведено несолько POST-запросов в цикле, скриншот дашборда:  
   <img src="/docs/images/T24-Msvc-03/Screen-105.png" alt="Скриншот Grafana new 2" width="670" height="620">  
   [Ссылка на docker-compose.yml](https://github.com/fedinly/netology/blob/e5005025745e7cad6e9523bf801dacf234f4f4f2/11-microsvc-03-approaches/srv/docker-compose-mon.yml)
+  [Ссылка на prometheus.yml](https://github.com/fedinly/netology/blob/22442d7108bb166ceb29d97219662706b23e9af4/11-microsvc-03-approaches/srv/prometheus/prometheus.yml)
