@@ -3,16 +3,16 @@
 - Создан Pod с именем hello-world. Содержимое файла манифеста:
   <details>
   <summary>Нажмите, чтобы развернуть</summary>
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      name: hello-world
-    spec:
-      containers:
-      - name: hello-world
-        image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
-        ports:
-          - containerPort: 80
+    apiVersion: v1  
+    kind: Pod  
+    metadata:  
+      name: hello-world  
+    spec:  
+      containers:  
+      - name: hello-world  
+        image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2  
+        ports:  
+          - containerPort: 80  
   </details>
 - Команда проброса порта в Pod:
   `kubectl port-forward --address 0.0.0.0 pod/hello-world 8080:8080`  
