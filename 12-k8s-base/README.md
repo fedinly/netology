@@ -5,4 +5,6 @@
 - Команда проброса порта в Pod:
   `kubectl port-forward --address 0.0.0.0 pod/hello-world 8080:8080`  
 - Вывод команды `curl localhost:8080`:  
-  <img src="/docs/images/T25-k8s-02/Screen-107.png" alt="Скриншот curl" width="370" height="370"> 
+  <img src="/docs/images/T25-k8s-02/Screen-107.png" alt="Скриншот curl" width="370" height="370">
+- Вывод команды (список Pods):  
+  <img src="/docs/images/T25-k8s-02/Screen-109.png" alt="Скриншот curl" width="370" height="170">
