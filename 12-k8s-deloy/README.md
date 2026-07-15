@@ -32,3 +32,5 @@ spec:
           value: "11443"
 ```
  Используем в манифесте другой порт (8080) для Multitool, поэтому ошибка не возникает.
+- Увеличен параметр replicas до 2:  
+  <img src="/docs/images/T25-k8s-03/Screen-113.png" alt="Скриншот Dashboard" width="270" height="150"> 
