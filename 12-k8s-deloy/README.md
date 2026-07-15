@@ -1,7 +1,7 @@
 # Решение домашнего задания к занятию «Запуск приложений в K8S»
 ## Задание 1.
 - Листинг файла с deployment:
-s```
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
