@@ -71,4 +71,5 @@ spec:
         name: mulitool-addon
   ```
   <img src="/docs/images/T25-k8s-03/Screen-115.png" alt="Скриншот service + pods" width="500" height="300">  
+  
   После подключения в контейнер netology-multitool через bash вывод команды `curl two-cnrs-svc` верный, ответ поступает от сервера nginx.
