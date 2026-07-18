@@ -38,13 +38,13 @@ spec:
   <img src="/docs/images/T25-k8s-03/Screen-114.png" alt="Скриншот pods" width="400" height="300">
 - Листинг файла с Service:
   ```
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: two-cnrs-svc
-    spec:
-      selector:
-        app: two-apps-deployment
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: two-cnrs-svc
+  spec:
+    selector:
+      app: two-apps-deployment
     type: NodePort
     ports:
     - name: http
@@ -55,4 +55,20 @@ spec:
       protocol: TCP
       port: 8080
       targetPort: 8080
+  ---
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: netology-multitool
+    labels:
+      app.kubernetes.io/name: multitool
+  spec:
+    containers:
+    - name: multitool
+      image: wbitt/network-multitool
+      ports:
+      - containerPort: 8090
+        name: mulitool-addon
   ```
+  <img src="/docs/images/T25-k8s-03/Screen-115.png" alt="Скриншот service + pods" width="400" height="200">
+  После подключения в контейнер netology-multitool через bash вывод команды `curl two-cnrs-svc` верный, ответ сервера nginx.
