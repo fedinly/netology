@@ -35,4 +35,24 @@ spec:
 - Увеличен параметр replicas до 2:  
   <img src="/docs/images/T25-k8s-03/Screen-113.png" alt="Скриншот replicas" width="370" height="250"> 
 - Кол-во подов (до и после масштабирования):  
-  <img src="/docs/images/T25-k8s-03/Screen-114.png" alt="Скриншот pods" width="400" height="300"> 
+  <img src="/docs/images/T25-k8s-03/Screen-114.png" alt="Скриншот pods" width="400" height="300">
+- Листинг файла с Service:
+  ```
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: two-cnrs-svc
+    spec:
+      selector:
+        app: two-apps-deployment
+    type: NodePort
+    ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: multitool
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  ```
