@@ -73,3 +73,51 @@ spec:
   <img src="/docs/images/T25-k8s-03/Screen-115.png" alt="Скриншот service + pods" width="500" height="300">  
   
   После подключения в контейнер netology-multitool через bash вывод команды `curl two-cnrs-svc` верный, ответ поступает от сервера nginx.
+  
+## Задание 2.
+- Листинг файла init-deploy.yaml:
+  ```
+  apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: init-container-dpl
+  labels:
+    app: init-container-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: init-container-app
+  template:
+    metadata:
+      labels:
+        app: init-container-app
+    spec:
+      initContainers:
+      # Первый (вспомогательный) контейнер, busybox
+      - name: init
+        image: busybox:1.36
+        command: ['sh', '-c', 'until nslookup init-service; do echo "waiting for webserver..."; sleep 2; done']
+      containers:
+      - name: first-app
+        image: nginx:alpine
+        ports:
+        - containerPort: 8090
+      # Второй (основной) контейнер
+  ```
+  Листинг файла init-service.yaml:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: init-service
+spec:
+  selector:
+    app: init-container-app
+  ports:
+  - name: name-of-service-port
+    protocol: TCP
+    port: 8080
+    targetPort: 80
+```
+Сервис поднимается, имя верное, но под постоянно в состоянии Init:0/1, т.е. не поднимается.
