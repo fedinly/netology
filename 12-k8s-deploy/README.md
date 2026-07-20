@@ -78,16 +78,16 @@ spec:
 - Листинг файла init-deploy.yaml:
   ```
   apiVersion: apps/v1
-kind: Deployment
-metadata:
+    kind: Deployment
+    metadata:
   name: init-container-dpl
-  labels:
-    app: init-container-app
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
+    labels:
       app: init-container-app
+  spec:
+    replicas: 1
+      selector:
+        matchLabels:
+          app: init-container-app
   template:
     metadata:
       labels:
