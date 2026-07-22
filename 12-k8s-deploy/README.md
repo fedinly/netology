@@ -121,3 +121,6 @@ spec:
     targetPort: 80
 ```
 Сервис поднимается, имя верное, но под постоянно в состоянии Init:0/1, т.е. не поднимается.
+После запроса логов контейнера в поде `kubectl logs init-container-dpl-5df7f4b547-nvkbg -c init` было изменено имя сервиса для проверки в initContainer, прописано FQDN: `init-service.default.svc.cluster.local`.  
+Pod поднялся:  
+<img src="/docs/images/T25-k8s-03/Screen-117.png" alt="pod" width="700" height="200">
