@@ -1,4 +1,4 @@
 # Решение домашнего задания к занятию «Сетевое взаимодействие в Kubernetes»
 ## Задание 1.
 - Изменение настройки `type: ClusterIP` по сравнению с деплоем для задания «Запуск приложений в K8S»
-  <img src="/docs/images/T26-k8s-04/Screen-119.png" alt="Скриншот replicas" width="670" height="600"> 
+  <img src="/docs/images/T25-k8s-04/Screen-118.png" alt="Скриншот ClusterIP" width="670" height="600"> 
