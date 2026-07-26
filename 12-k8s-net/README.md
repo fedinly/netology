@@ -22,3 +22,6 @@
         targetPort: 80
 
   ```
+При этом созданы сервеис, эндпоинты, но порт  в системе не слушается. Ноду перезапускал.  
+<img src="/docs/images/T25-k8s-04/Screen-118.png" alt="Скриншот Service NodePort" width="500" height="200"> 
+## Задание 2.
