@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-exch-deployment
+  labels:
+    app: data-exchange-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-exch-deployment
+  template:
+    metadata:
+      labels:
+        app: data-exch-deployment
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:1.36
+        command: ['sh', '-c', 'watch -n 5 echo "app is running" > /data-exch/test.txt']
+        volumeMounts:
+        - name: exchange
+          mountPath: /data-exch
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: exchange
+          mountPath: /data-exch
+      volumes:
+        - name: exchange
+          emptyDir:
+            sizeLimit: 500Mi
