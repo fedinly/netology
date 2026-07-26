@@ -26,4 +26,4 @@
 <img src="/docs/images/T25-k8s-04/Screen-119.png" alt="Скриншот Service NodePort" width="500" height="200"> 
 ## Задание 2.
 - [Файл деплоя](https://github.com/fedinly/netology/blob/6b21b328c0f7fb587c3d8a3d999dca52066f3165/12-k8s-net/deployment-front-back.yaml), [Service front](https://github.com/fedinly/netology/blob/6b21b328c0f7fb587c3d8a3d999dca52066f3165/12-k8s-net/service-frontend.yaml), [Service back](https://github.com/fedinly/netology/blob/6b21b328c0f7fb587c3d8a3d999dca52066f3165/12-k8s-net/service-backend.yaml), [ingress](https://github.com/fedinly/netology/blob/6b21b328c0f7fb587c3d8a3d999dca52066f3165/12-k8s-net/ingress.yaml).  
-  Создаются сервисы, эндпоинты, но при проверке `curl <IP ep>/api` выдает 401 ошибку.
+  Создаются сервисы, эндпоинты, но при проверке `curl <IP ep>/api` выдает 401 ошибку (проверяю из созданного рядом контейнера multitool).
