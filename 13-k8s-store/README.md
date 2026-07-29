@@ -17,4 +17,6 @@
 - Скриншот изменений общего файла в контейнере multitool:  
   <img src="/docs/images/T26-k8s-01/Screen-122.png" alt="Скриншот общий файл" width="500" height="500">  
   Содержимое файла:  
-  <img src="/docs/images/T26-k8s-01/Screen-123.png" alt="Скриншот содержимое" width="500" height="200"> 
+  <img src="/docs/images/T26-k8s-01/Screen-123.png" alt="Скриншот содержимое" width="500" height="200">
+- PV переходит из состояния Bound в состояние Released при удалении использующего его PVC, при этом в соответствии с политикой Retain данные продолжают храниться на томе.  
+  <img src="/docs/images/T26-k8s-01/Screen-124.png" alt="Скриншот содержимое" width="500" height="500">  
