@@ -15,6 +15,6 @@
   ```  
   [Файл pv-pvc.yaml](https://github.com/fedinly/netology/blob/8d69d79c06172a8132a4fe39581bb69eca7f5d2e/13-k8s-store/pv-pvc.yaml)
 - Скриншот изменений общего файла в контейнере multitool:  
-  <img src="/docs/images/T26-k8s-01/Screen-122.png" alt="Скриншот общий файл" width="500" height="500"> 
+  <img src="/docs/images/T26-k8s-01/Screen-122.png" alt="Скриншот общий файл" width="500" height="500">  
   Содержимое файла:  
   <img src="/docs/images/T26-k8s-01/Screen-123.png" alt="Скриншот содержимое" width="500" height="200"> 
