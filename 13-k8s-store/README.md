@@ -5,3 +5,12 @@
   <img src="/docs/images/T26-k8s-01/Screen-120.png" alt="Скриншот общий файл" width="500" height="200">  
   Скриншот информации об изменении файла каждые 5 сек.  
   <img src="/docs/images/T26-k8s-01/Screen-121.png" alt="Скриншот изменений" width="500" height="400">
+## Задание 2.
+- В файле деплоя меняется описание подключаемого диска:
+  ```
+     volumes:
+        - name: exchange
+          persistentVolumeClaim:
+            claimName: pv1-claim
+  ```  
+  [Файл pv-pvc.yaml](https://github.com/fedinly/netology/blob/8d69d79c06172a8132a4fe39581bb69eca7f5d2e/13-k8s-store/pv-pvc.yaml)
