@@ -24,4 +24,5 @@
   <img src="/docs/images/T26-k8s-01/Screen-125.png" alt="Скриншот файл на диске" width="400" height="150">  
 - PV удален, файл остался на диске ноды (как на скрине выше), по причине настройки политики хранения Retain.
 ## Задание 3.
-- [Файл sc.yaml](https://github.com/fedinly/netology/blob/ec7feacb8ed8922c7cce35d36e45764bdec19d30/13-k8s-store/sc.yaml)  
+- [Файл sc.yaml](https://github.com/fedinly/netology/blob/ec7feacb8ed8922c7cce35d36e45764bdec19d30/13-k8s-store/sc.yaml)
+  Данные между контейнерами обмениваются через volume аналогиячно первым двум пунктам.
