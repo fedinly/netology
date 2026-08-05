@@ -6,4 +6,5 @@
   <img src="/docs/images/T26-k8s-02/Screen-128.png" alt="Скриншот вывод html" width="500" height="400"> 
 # Задание 2: Настройка HTTPS с Secrets
 # Задание 3: Настройка RBAC
--
+- Cоздание сертификата:  
+  <img src="/docs/images/T26-k8s-02/Screen-129.png" alt="Скриншот create cert" width="500" height="300"> 
