@@ -5,6 +5,9 @@
 - Скриншот доступа к подготовленной странице из контейнера multitool в поде:  
   <img src="/docs/images/T26-k8s-02/Screen-128.png" alt="Скриншот вывод html" width="500" height="400"> 
 # Задание 2: Настройка HTTPS с Secrets
+- Файлы [secret-tls.yaml](https://github.com/fedinly/netology/blob/2a69322e89232902390f9cb5db663247b0ec4d4d/13-k83-configs/secret-tls.yaml), [ingress-tls.yaml](https://github.com/fedinly/netology/blob/2a69322e89232902390f9cb5db663247b0ec4d4d/13-k83-configs/ingress-tls.yaml)
+- Скриншот `curl -k`:  
+  <img src="/docs/images/T26-k8s-02/Screen-133.png" alt="Скриншот currl -k" width="600" height="550">  
 # Задание 3: Настройка RBAC
 - Cоздание сертификата:  
   <img src="/docs/images/T26-k8s-02/Screen-129.png" alt="Скриншот create cert" width="500" height="300">
