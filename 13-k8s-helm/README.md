@@ -3,4 +3,5 @@
 - Скриншот настроек `~/.kube/config`, подключается без tls к удаленному кластеру:
   <img src="/docs/images/T26-k8s-03/Screen-138.png" alt="Скриншот config" width="600" height="500">  
 - Скриншот успешного деплоя приложения:  
-- <img src="/docs/images/T26-k8s-03/Screen-137.png" alt="Скриншот деплоя" width="600" height="200">  
+  <img src="/docs/images/T26-k8s-03/Screen-137.png" alt="Скриншот деплоя" width="600" height="200">  
+- [Каталог с чартом](https://github.com/fedinly/netology/tree/b469655609e1fdbeac0cacd151d3cbb6aa487ff8/13-k8s-helm/netology-app)
