@@ -1,1 +1,16 @@
-
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-content-01
+  namespace: helm
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Страница для решения ДЗ</title> # ИЗМЕНИТЕ: Заголовок страницы
+    </head>
+    <body>
+      <h1>Решение ДЗ по теме «Настройка приложений и управление доступом в Kubernetes»</h1>
+    </body>
+    </html>
