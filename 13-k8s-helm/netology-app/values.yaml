@@ -1,0 +1,15 @@
+image:
+  frontend:
+    name: nginx
+    tag: latest
+  backend:
+    name: wbitt/network-multitool 
+    tag: latest
+replicas: 1
+service:
+  frontend:
+    enabled: true
+    port: 80
+  backend:
+    enabled: true
+    port: 8080
