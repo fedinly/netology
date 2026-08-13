@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netology-app
+  namespace: helm
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: netology-app
+  template:
+    metadata:
+      labels:
+        app: netology-app
+    spec:
+      containers:
+      - name: multitool
+        image: {{ .Values.image.backend.name }}
+        env:
+        - name: HTTP_PORT
+          value: "8080"
