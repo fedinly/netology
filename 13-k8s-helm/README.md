@@ -9,4 +9,4 @@
 - Запуск нескольких копий приложения путем изменения параметра `replicas:` в файле values.yaml:  
   <img src="/docs/images/T26-k8s-03/Screen-139.png" alt="Скриншот upgrade chart" width="600" height="500">
 - Скриншот pods:  
-  <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот деплоя" width="600" height="200">  
+  <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот деплоя" width="600" height="300">  
