@@ -8,5 +8,9 @@
 ## Задание 2.
 - Запуск нескольких копий приложения путем изменения параметра `replicas:` в файле values.yaml:  
   <img src="/docs/images/T26-k8s-03/Screen-139.png" alt="Скриншот upgrade chart" width="600" height="500">
-- Скриншот pods:  
+  Скриншот pods:  
   <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот деплоя" width="600" height="300">  
+- Запуск приложения в нескольких namespace:  
+  <img src="/docs/images/T26-k8s-03/Screen-141.png" alt="Скриншот 2 namespaces" width="600" height="300">
+  Скриншот - вывод информации о сервисах:  
+  <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот 2 namespaces" width="600" height="300">
