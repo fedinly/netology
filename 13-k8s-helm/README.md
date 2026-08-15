@@ -11,6 +11,6 @@
   Скриншот pods:  
   <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот деплоя" width="600" height="300">  
 - Запуск приложения в нескольких namespace:  
-  <img src="/docs/images/T26-k8s-03/Screen-141.png" alt="Скриншот 2 namespaces" width="600" height="300">
+  <img src="/docs/images/T26-k8s-03/Screen-141.png" alt="Скриншот 2 namespaces" width="600" height="200">
   Скриншот - вывод информации о сервисах:  
-  <img src="/docs/images/T26-k8s-03/Screen-140.png" alt="Скриншот 2 namespaces" width="600" height="300">
+  <img src="/docs/images/T26-k8s-03/Screen-142.png" alt="Скриншот svc" width="600" height="300">
