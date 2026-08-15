@@ -13,5 +13,5 @@
 - Запуск приложения в нескольких namespace:  
   <img src="/docs/images/T26-k8s-03/Screen-141.png" alt="Скриншот 2 namespaces" width="600" height="200">  
   Скриншот - вывод информации о сервисах:  
-  <img src="/docs/images/T26-k8s-03/Screen-142.png" alt="Скриншот svc" width="600" height="300">
+  <img src="/docs/images/T26-k8s-03/Screen-142.png" alt="Скриншот svc" width="600" height="300">  
   [Каталог netology-app](https://github.com/fedinly/netology/tree/d808f6ddb96cdb47e1b2388c4c719477df8608a3/13-k8s-helm/netology-app)
