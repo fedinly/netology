@@ -8,5 +8,12 @@ variable "cidr_blocks" {
 
 variable "vpc_name" {
   type    = string
-  default = "net"
+}
+
+variable "cloud_id" {
+  type = string
+}
+
+variable "folder_id" {
+  type = string
 }
