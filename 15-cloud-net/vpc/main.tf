@@ -1,27 +1,48 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
+module "cloud_net" {
+  source       = "./vpc"
+  vpc_name     = "cloud_net"
+  subnet_zones = ["ru-central1-b","ru-central1-d"]
+  cidr_blocks  = ["192.168.10.0/24","192.168.20.0/24"]
+  cloud_id       = var.cloud_id
+  folder_id      = var.folder_id 
+}
+
+locals {
+  subnet_id_list = module.cloud_net.subnet_details
+  user-data = "${file("~/.ssh/id_ed25519.pub")}"
+}
+
+data "yandex_compute_image" "ubuntu" {
+  family = var.vm_image_name
+}
+
+resource "yandex_compute_instance" "vm" {
+  count           = 2
+  name            = "vm-${count.index+1}"
+  zone            = local.subnet_id_list[count.index % length(local.subnet_id_list)].zone
+  platform_id     = var.vms_resources.vm.platform
+ 
+  resources {
+    cores         = var.vms_resources.vm.cores
+    memory        = var.vms_resources.vm.memory
+    core_fraction = var.vms_resources.vm.core_fraction
+  }
+  boot_disk {
+    initialize_params {
+      image_id    = data.yandex_compute_image.ubuntu.image_id
+      size        = var.vms_resources.vm.hdd_size
+      type        = var.vms_resources.vm.hdd_type
     }
   }
-  required_version = ">=1.8.4"  ### some test 29.10.2025
-}
-
-resource "yandex_vpc_network" "cloud_net1" {
-  name           = var.vpc_name
-  folder_id      = var.folder_id
-  #cloud_id       = var.cloud_id
-}
-
-resource "yandex_vpc_subnet" "cloud_subnets" {
-  for_each = {
-    "public" = "ru-central1-d"
-    "private" = "ru-central1-b"
+  scheduling_policy {
+    preemptible   = true
+  }
+  network_interface {
+    subnet_id     = local.subnet_id_list[count.index % length(local.subnet_id_list)].id
+    nat           = local.subnet_id_list[count.index % length(local.subnet_id_list)].name == "private" ? false : true
   }
 
-  name           = "${each.key}"
-  zone           = each.value
-  network_id     = yandex_vpc_network.cloud_net1.id
-  v4_cidr_blocks = ["192.168.${each.key == "public" ? 10 : 20}.0/24"]
-  #route_table_id = yandex_vpc_route_table.nat-instance-route.id
+  metadata = {
+    ssh-keys = "ubuntu:${local.user-data}"
+  }
 }
