@@ -7,4 +7,4 @@
   <img src="/docs/images/T28-cloud-02/Screen-155.png" alt="Скриншот страницы через nlb" width="600" height="400">
 ## Задание 1.3.
 - Скриншот проверки отказоустойчивости (удаление одной ВМ):  
-  <img src="/docs/images/T28-cloud-02/Screen-154.png" alt="Скриншот проверки отказоустойчивости" width="600" height="300">
+  <img src="/docs/images/T28-cloud-02/Screen-154.png" alt="Скриншот проверки отказоустойчивости" width="700" height="400">
