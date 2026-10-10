@@ -4,3 +4,4 @@
   <img src="/docs/images/T28-cloud-03/Screen-156.png" alt="Скриншот вывод создания кластера и БД" width="700" height="450">
 ## Задание 1.2
 - Если возмжно, будем использовать ссылки из документа [ссылка1](https://yandex.cloud/en/docs/tutorials/container-infrastructure/k8s-cluster-with-no-internet), в частности [ссылка2](https://github.com/yandex-cloud-examples/yc-mk8s-cluster-without-internet/blob/main/README.md)
+- В итоге собственный конфиг, на основе бэст практис Хабра, [Ссылка](https://github.com/fedinly/netology/tree/72d10d5cdfc6d49e77a91f6e0eae3e05342dac12/15-cloud-cls/terraform1)
